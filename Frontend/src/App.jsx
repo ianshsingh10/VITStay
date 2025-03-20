@@ -5,7 +5,7 @@ import LandingPage from './components/LandingPage';
 import Login from './components/LoginPage';
 import Profile from './components/ProfilePage';
 import HostelSelectionPage from './components/HostelSelection';
-
+import RoomSelectionPage from './components/BoysBlock1';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -35,6 +35,7 @@ function App() {
                     <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} />} />
                     <Route path="/profile" element={<Profile handleLogout={handleLogout}/>} />
                     <Route path="/hostels" element={<HostelSelectionPage/>} />
+                    <Route path="/select-room/:hostelName" element={<RoomSelectionPage />} />
                 </Routes>
         </Router>
     );
