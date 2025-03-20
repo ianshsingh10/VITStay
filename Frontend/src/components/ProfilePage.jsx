@@ -47,11 +47,20 @@ const Profile = ({ handleLogout }) => {
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
             <div className="w-full max-w-md p-6 rounded-2xl shadow-xl bg-white">
                 <h2 className="text-2xl font-bold text-center mb-6">Profile</h2>
+                
                 <div className="text-center mb-4">
+                    {userData.profilePicture && (
+                        <img 
+                            src={userData.profilePicture} 
+                            alt="Profile" 
+                            className="w-32 h-32 rounded-full mx-auto mb-4"
+                        />
+                    )}
                     <p><strong>Name:</strong> {userData.username}</p>
                     <p><strong>Registration Number:</strong> {userData.regNo}</p>
                     <p><strong>Email:</strong> {userData.email}</p>
                 </div>
+                
                 <button
                     onClick={handleLogout}
                     className="w-full mt-4 bg-red-500 text-white py-2 px-4 rounded-xl hover:bg-red-600 transition"

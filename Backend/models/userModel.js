@@ -6,6 +6,7 @@ const userSchema = new mongoose.Schema({
     googleId: { type: String },
     username: { type: String },
     email: { type: String },
+    profilePicture:{ type: String }
 });
 
 export default mongoose.model('User', userSchema);

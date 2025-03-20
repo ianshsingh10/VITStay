@@ -46,7 +46,6 @@ router.post('/register', async (req, res) => {
 });
 
 // Google Login route
-// Google Login route
 router.post('/google-login', async (req, res) => {
     try {
         const { credential } = req.body;
@@ -59,15 +58,15 @@ router.post('/google-login', async (req, res) => {
         const payload = ticket.getPayload();
         const googleId = payload.sub;
         const fullNameAndRegNo = payload.name;
-        const email=payload.email;
-
-        // Extracting name and regNo
+        const email = payload.email;
+        const profilePicture = payload.picture; // Get profile picture URL from Google
+        
         const nameMatch = fullNameAndRegNo.match(/^(.*)\s(\w{10})$/);
         
         if (!nameMatch) return res.status(400).json({ message: 'Invalid name format received from Google' });
 
-        const username = nameMatch[1]; // Name part
-        const regNo = nameMatch[2];     // Last 10 digits
+        const username = nameMatch[1];
+        const regNo = nameMatch[2];
 
         let user = await User.findOne({ googleId });
 
@@ -77,7 +76,11 @@ router.post('/google-login', async (req, res) => {
                 username,
                 regNo,
                 email,
+                profilePicture  // Save profile picture URL
             });
+            await user.save();
+        } else {
+            user.profilePicture = profilePicture; // Update if user already exists
             await user.save();
         }
 
@@ -93,6 +96,7 @@ router.post('/google-login', async (req, res) => {
     }
 });
 
+
 // Profile route
 router.get('/profile', async (req, res) => {
     try {
@@ -107,11 +111,13 @@ router.get('/profile', async (req, res) => {
         res.status(200).json({
             username: user.username,
             regNo: user.regNo,
-            email: user.regNo.includes('@') ? user.regNo : 'N/A' 
+            email: user.email,
+            profilePicture: user.profilePicture
         });
     } catch (error) {
         res.status(500).json({ message: 'Failed to fetch user data.' });
     }
 });
+
 
 export default router;
