@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 
-const LoginPage = () => {
+const Login = ({ setIsLoggedIn, setUsername }) => {
   const [loginData, setLoginData] = useState({ regNo: '', password: '' });
   const navigate = useNavigate();
   const API_BASE_URL = 'http://localhost:5000';
@@ -28,7 +28,9 @@ const LoginPage = () => {
       if (response.ok) {
         alert(data.message || 'Login successful.');
         localStorage.setItem('token', data.token); 
-        navigate('/hostels');
+        setUsername(data.username);
+        setIsLoggedIn(true);
+        navigate('/');
       } else {
         alert(data.message || 'Login failed.');
       }
@@ -53,7 +55,9 @@ const LoginPage = () => {
       if (response.ok) {
         alert('Google login successful.');
         localStorage.setItem('token', data.token);
-        navigate('/hostels');
+        setUsername(data.username); 
+        setIsLoggedIn(true);
+        navigate('/');
       } else {
         alert(data.message || 'Google login failed.');
       }
@@ -110,4 +114,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Login;

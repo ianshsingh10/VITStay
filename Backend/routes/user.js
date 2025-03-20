@@ -76,5 +76,25 @@ router.post('/google-login', async (req, res) => {
         res.status(500).json({ message: 'Google login failed' });
     }
 });
+// Profile route
+router.get('/profile', async (req, res) => {
+    try {
+        const token = req.headers.authorization?.split(' ')[1];
+        if (!token) return res.status(401).json({ message: 'Unauthorized. No token provided.' });
+
+        const decoded = jwt.verify(token, jwtSecret);
+        const user = await User.findById(decoded.id);
+
+        if (!user) return res.status(404).json({ message: 'User not found.' });
+
+        res.status(200).json({
+            username: user.username,
+            regNo: user.regNo,
+            email: user.regNo.includes('@') ? user.regNo : 'N/A' 
+        });
+    } catch (error) {
+        res.status(500).json({ message: 'Failed to fetch user data.' });
+    }
+});
 
 export default router;
