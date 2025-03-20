@@ -1,7 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-
 import userRoutes from './routes/user.js';
 import hostelRoutes from './routes/hostel.js';
 import { database } from './config.js';
