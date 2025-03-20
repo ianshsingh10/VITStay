@@ -46,6 +46,7 @@ router.post('/register', async (req, res) => {
 });
 
 // Google Login route
+// Google Login route
 router.post('/google-login', async (req, res) => {
     try {
         const { credential } = req.body;
@@ -57,25 +58,41 @@ router.post('/google-login', async (req, res) => {
 
         const payload = ticket.getPayload();
         const googleId = payload.sub;
+        const fullNameAndRegNo = payload.name;
+        const email=payload.email;
+
+        // Extracting name and regNo
+        const nameMatch = fullNameAndRegNo.match(/^(.*)\s(\w{10})$/);
+        
+        if (!nameMatch) return res.status(400).json({ message: 'Invalid name format received from Google' });
+
+        const username = nameMatch[1]; // Name part
+        const regNo = nameMatch[2];     // Last 10 digits
 
         let user = await User.findOne({ googleId });
 
         if (!user) {
             user = new User({
                 googleId,
-                username: payload.name,
-                regNo: payload.email
+                username,
+                regNo,
+                email,
             });
             await user.save();
         }
 
-        const token = jwt.sign({ id: user._id, regNo: user.regNo }, jwtSecret, { expiresIn: '1h' });
+        const token = jwt.sign(
+            { id: user._id, regNo: user.regNo, username: user.username }, 
+            jwtSecret, 
+            { expiresIn: '1h' }
+        );
 
         res.status(200).json({ message: 'Google login successful', token });
     } catch (error) {
         res.status(500).json({ message: 'Google login failed' });
     }
 });
+
 // Profile route
 router.get('/profile', async (req, res) => {
     try {

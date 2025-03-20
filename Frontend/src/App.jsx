@@ -12,13 +12,14 @@ function App() {
     const [username, setUsername] = useState('');
 
     useEffect(() => {
-        const token = localStorage.getItem('token');
-        if (token) {
-            setIsLoggedIn(true);
-            const user = JSON.parse(atob(token.split('.')[1]));
-            setUsername(user.username);
-        }
-    }, []);
+      const token = localStorage.getItem('token');
+      if (token) {
+          setIsLoggedIn(true);
+          const user = JSON.parse(atob(token.split('.')[1]));
+          setUsername(user.username); // Now, username will be correctly set
+      }
+  }, []);
+  
 
     const handleLogout = () => {
         localStorage.removeItem('token');
