@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
 import Login from './components/LoginPage';
 import Profile from './components/ProfilePage';
 import HostelSelectionPage from './components/HostelSelection';
+
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -26,14 +28,13 @@ function App() {
 
     return (
         <Router>
-            <div>
+            <Navbar isLoggedIn={isLoggedIn} username={username} setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} handleLogout={handleLogout} />
                 <Routes>
-                    <Route path="/" element={<LandingPage isLoggedIn={isLoggedIn} username={username} />} />
+                    <Route path="/" element={<LandingPage/>} />
                     <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} />} />
                     <Route path="/profile" element={<Profile handleLogout={handleLogout}/>} />
                     <Route path="/hostels" element={<HostelSelectionPage/>} />
                 </Routes>
-            </div>
         </Router>
     );
 }
