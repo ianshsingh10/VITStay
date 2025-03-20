@@ -49,13 +49,17 @@ const Login = ({ setIsLoggedIn, setUsername }) => {
         },
         body: JSON.stringify({ credential: credentialResponse.credential }),
       });
-
+  
       const data = await response.json();
-
+  
       if (response.ok) {
         alert('Google login successful.');
         localStorage.setItem('token', data.token);
-        setUsername(data.username); 
+  
+        // Decode token to extract the username and save it
+        const user = JSON.parse(atob(data.token.split('.')[1]));
+        localStorage.setItem('username', user.username); // Store username separately
+        setUsername(user.username); 
         setIsLoggedIn(true);
         navigate('/');
       } else {
@@ -66,6 +70,7 @@ const Login = ({ setIsLoggedIn, setUsername }) => {
       alert('An error occurred during Google login.');
     }
   };
+  
 
   return (
     <GoogleOAuthProvider clientId="249046872949-oa2m17cs3986jd6g2j193c5rrofb1bbk.apps.googleusercontent.com">

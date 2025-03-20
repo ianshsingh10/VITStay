@@ -48,9 +48,9 @@ const Profile = ({ handleLogout }) => {
             <div className="w-full max-w-md p-6 rounded-2xl shadow-xl bg-white">
                 <h2 className="text-2xl font-bold text-center mb-6">Profile</h2>
                 <div className="text-center mb-4">
-                    <p><strong>Username:</strong> {userData.username}</p>
-                    <p><strong>Email:</strong> {userData.email}</p>
+                    <p><strong>Name:</strong> {userData.username}</p>
                     <p><strong>Registration Number:</strong> {userData.regNo}</p>
+                    <p><strong>Email:</strong> {userData.email}</p>
                 </div>
                 <button
                     onClick={handleLogout}
