@@ -27,73 +27,37 @@ function Navbar({ isLoggedIn, setIsLoggedIn, setUsername, username, handleLogout
 
                 {/* Center Section - Navigation Links */}
                 <div className="hidden md:flex gap-6 text-[1.5vmin] text-bold text-white">
-                    <NavLink 
-                        to="/instructions" 
-                        className={({ isActive }) => 
-                            isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"
-                        }
-                    >
+                    <NavLink to="/instructions" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
                         INSTRUCTIONS
                     </NavLink>
-                    <NavLink 
-                        to="/hostel-fee" 
-                        className={({ isActive }) => 
-                            isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"
-                        }
-                    >
+                    <NavLink to="/hostel-fee" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
                         FEE STRUCTURE
                     </NavLink>
-                    <NavLink 
-                        to="/affidavits" 
-                        className={({ isActive }) => 
-                            isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"
-                        }
-                    >
+                    <NavLink to="/affidavits" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
                         AFFIDAVITS
                     </NavLink>
-                    <NavLink 
-                        to="/warden-details" 
-                        className={({ isActive }) => 
-                            isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"
-                        }
-                    >
+                    <NavLink to="/warden-details" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
                         WARDEN DETAILS
                     </NavLink>
-                    <NavLink 
-                        to="/hostels" 
-                        className={({ isActive }) => 
-                            isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"
-                        }
-                    >
+                    <NavLink to="/hostels" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
                         HOSTEL PREFERENCES
                     </NavLink>
-                    <NavLink 
-                        to="/room-view" 
-                        className={({ isActive }) => 
-                            isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"
-                        }
-                    >
+                    <NavLink to="/room-view" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
                         ROOM VIEW 3D
                     </NavLink>
-                    <NavLink 
-                        to="/final-allotment" 
-                        className={({ isActive }) => 
-                            isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"
-                        }
-                    >
+                    <NavLink to="/final-allotment" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
                         FINAL ROOM ALLOTMENT
                     </NavLink>
                 </div>
 
-                {/* Right Section - Login/Logout */}
+                {/* Right Section - Profile/Logout */}
                 <div className="flex items-center gap-4">
                     {isLoggedIn ? (
-                        <button 
-                            onClick={handleLogout}
-                            className="w-[15vmin] p-[1vmin] text-[2vmin] text-center rounded-md text-white bg-gradient-to-r from-[#FF9A9A] to-[#DE0000] hover:from-[#FF8A8A] hover:to-[#CE0000]"
-                        >
-                            LOG OUT
-                        </button>
+                        <Link to="/profile">
+                            <div className="w-[15vmin] p-[1vmin] text-[2vmin] text-center rounded-md text-white bg-gradient-to-r from-[#A7E2FF] to-[#0095DE] hover:from-[#97D2FF] hover:to-[#0085CE]">
+                                {username.toUpperCase()}
+                            </div>
+                        </Link>
                     ) : (
                         <Link to="/login">
                             <div className="w-[15vmin] p-[1vmin] text-[2vmin] text-center rounded-md text-white bg-gradient-to-r from-[#A7E2FF] to-[#0095DE] hover:from-[#97D2FF] hover:to-[#0085CE]">
