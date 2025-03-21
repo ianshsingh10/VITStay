@@ -5,7 +5,7 @@ import '@fontsource/poppins';
 
 const API_BASE_URL = "http://localhost:5000";
 
-const LandingPage = () => {
+const RoomSelectionPage = () => {
   const { hostelName } = useParams();
   const navigate = useNavigate();
   const [rooms, setRooms] = useState([]);
@@ -146,4 +146,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default RoomSelectionPage;

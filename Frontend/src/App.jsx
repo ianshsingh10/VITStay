@@ -8,6 +8,8 @@ import HostelSelectionPage from './components/HostelSelection';
 import RoomSelectionPage from './components/BookRoom';
 import ComplaintPage from './components/complaint'; // Importing the Complaint Page
 import HostelFeeStructure from './components/HostelFeeStructure';
+import Instructions from './components/Instructions';
+import WardenDetails from './components/WardenDetails';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -79,6 +81,8 @@ function App() {
                         <Route path="/hostels" element={<HostelSelectionPage />} />
                         <Route path="/select-room/:hostelName" element={<RoomSelectionPage />} />
                         <Route path="/hostel-fee" element={<HostelFeeStructure />} />
+                        <Route path="/instructions" element={<Instructions />} />
+                        <Route path="/warden-details" element={<WardenDetails />} />
                     </Routes>
                 </div>
             </div>
