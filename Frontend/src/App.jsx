@@ -1,93 +1,70 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import LandingPage from './components/LandingPage';
-import Login from './components/LoginPage';
-import Profile from './components/ProfilePage';
-import HostelSelectionPage from './components/HostelSelection';
-import RoomSelectionPage from './components/BookRoom';
-import ComplaintPage from './components/complaint'; // Importing the Complaint Page
-import HostelFeeStructure from './components/HostelFeeStructure';
-import Instructions from './components/Instructions';
-import WardenDetails from './components/WardenDetails';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import LandingPage from "./components/LandingPage";
+import Login from "./components/LoginPage";
+import Profile from "./components/ProfilePage";
+import HostelSelectionPage from "./components/HostelSelection";
+import RoomSelectionPage from "./components/BookRoom";
+import ComplaintPage from "./components/complaint"; // Importing the Complaint Page
+import HostelFeeStructure from "./components/HostelFeeStructure";
+import Instructions from "./components/Instructions";
+import WardenDetails from "./components/WardenDetails";
 
 function App() {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [username, setUsername] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [username, setUsername] = useState("");
 
-    useEffect(() => {
-        const token = localStorage.getItem('token');
-        if (token) {
-            setIsLoggedIn(true);
-            const user = JSON.parse(atob(token.split('.')[1]));
-            setUsername(user.username);
-        }
-    }, []);
-  
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsLoggedIn(true);
+      const user = JSON.parse(atob(token.split(".")[1]));
+      setUsername(user.username);
+    }
+  }, []);
 
-    const handleLogout = () => {
-        localStorage.removeItem('token');
-        localStorage.removeItem('username');
-        setIsLoggedIn(false);
-        setUsername('');
-    };
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
+    setIsLoggedIn(false);
+    setUsername("");
+  };
 
-    return (
-        <Router>
-            <Navbar 
-                isLoggedIn={isLoggedIn} 
-                username={username} 
-                setIsLoggedIn={setIsLoggedIn} 
-                setUsername={setUsername} 
-                handleLogout={handleLogout} 
-            />
-            <Routes>
-                <Route path="/" element={<LandingPage/>} />
-                <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} />} />
-                <Route path="/profile" element={<Profile handleLogout={handleLogout}/>} />
-                <Route path="/hostels" element={<HostelSelectionPage/>} />
-                <Route path="/select-room/:hostelName" element={<RoomSelectionPage />} />
-                <Route path="/complaint" element={<ComplaintPage />} /> {/* New Route for Complaint Page */}
-            </Routes>
-            <div className="min-h-screen flex flex-col">
-                <Navbar 
-                    isLoggedIn={isLoggedIn} 
-                    setIsLoggedIn={setIsLoggedIn}
-                    username={username}
-                    setUsername={setUsername}
-                    handleLogout={handleLogout}
-                />
-                <div className="flex-1 mt-[10vh]"> {/* Added margin-top to account for fixed navbar */}
-                    <Routes>
-                        <Route path="/" element={<LandingPage />} />
-                        <Route 
-                            path="/login" 
-                            element={
-                                <Login 
-                                    setIsLoggedIn={setIsLoggedIn} 
-                                    setUsername={setUsername} 
-                                />
-                            } 
-                        />
-                        <Route 
-                            path="/profile" 
-                            element={
-                                <Profile 
-                                    handleLogout={handleLogout}
-                                    username={username}
-                                />
-                            } 
-                        />
-                        <Route path="/hostels" element={<HostelSelectionPage />} />
-                        <Route path="/select-room/:hostelName" element={<RoomSelectionPage />} />
-                        <Route path="/hostel-fee" element={<HostelFeeStructure />} />
-                        <Route path="/instructions" element={<Instructions />} />
-                        <Route path="/warden-details" element={<WardenDetails />} />
-                    </Routes>
-                </div>
-            </div>
-        </Router>
-    );
+  return (
+    <Router>
+      <Navbar
+        isLoggedIn={isLoggedIn}
+        username={username}
+        setIsLoggedIn={setIsLoggedIn}
+        setUsername={setUsername}
+        handleLogout={handleLogout}
+      />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route
+          path="/login"
+          element={
+            <Login setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} />
+          }
+        />
+        <Route
+          path="/profile"
+          element={<Profile handleLogout={handleLogout} />}
+        />
+        <Route path="/hostels" element={<HostelSelectionPage />} />
+        <Route
+          path="/select-room/:hostelName"
+          element={<RoomSelectionPage />}
+        />
+        <Route path="/complaint" element={<ComplaintPage />} />{" "}
+        {/* New Route for Complaint Page */}
+        <Route path="/hostel-fee" element={<HostelFeeStructure />} />
+        <Route path="/instructions" element={<Instructions />} />
+        <Route path="/warden-details" element={<WardenDetails />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
