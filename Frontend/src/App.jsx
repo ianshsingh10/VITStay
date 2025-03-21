@@ -5,12 +5,8 @@ import LandingPage from './components/LandingPage';
 import Login from './components/LoginPage';
 import Profile from './components/ProfilePage';
 import HostelSelectionPage from './components/HostelSelection';
-<<<<<<< HEAD
-import RoomSelectionPage from './components/BoysBlock1';
-import HostelFeeStructure from './components/HostelFeeStructure';
-=======
 import RoomSelectionPage from './components/BookRoom';
->>>>>>> 184885884de2f2ab993f316bca150f02e154895d
+import HostelFeeStructure from './components/HostelFeeStructure';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
