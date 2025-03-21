@@ -31,6 +31,7 @@ function Navbar({ isLoggedIn, setIsLoggedIn, setUsername, username }) {
           <NavLink to="/fee-structure" className={({ isActive }) => isActive ? "text-blue-600" : "hover:text-blue-500"}>FEE STRUCTURE</NavLink>
           <NavLink to="/affidavits" className={({ isActive }) => isActive ? "text-blue-600" : "hover:text-blue-500"}>AFFIDAVITS</NavLink>
           <NavLink to="/hostels" className={({ isActive }) => isActive ? "text-blue-600" : "hover:text-blue-500"}>HOSTELS</NavLink>
+          <NavLink to="/complaint" className={({ isActive }) => isActive ? "text-blue-600" : "hover:text-blue-500"}>COMPLAINT</NavLink>
         </div>
 
         <div className="flex items-center gap-4">
