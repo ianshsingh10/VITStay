@@ -1,0 +1,593 @@
+{
+    "name":"Boys Block 1",
+    "wing":[
+        {
+          "wingName": "A",
+          "bedType": "3 Bedded Non-AC Flat Bed",
+          "bedsPerRoom": 3,
+          "floors": [
+            {
+              "floorNumber": 0,
+              "rooms": [
+                  {"roomNumber": "A001", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "A002", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "A003", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "A004", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "A005", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "A006", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "A007", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "A008", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "A009", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "A010", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "A011", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "A012", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "A013", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "A014", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "A015", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]}          
+              ]
+            },
+            {
+              "floorNumber": 1,
+              "rooms": [
+                {"roomNumber": "A101", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A102", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A103", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A104", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A105", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A106", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A107", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A108", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A109", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A110", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A111", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A112", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A113", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A114", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A115", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]}
+              ]
+            },
+            {
+              "floorNumber": 3,
+              "rooms": [
+                {"roomNumber": "A301", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A302", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A303", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A304", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A305", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A306", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A307", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A308", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A309", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A310", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A311", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A312", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A313", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A314", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A315", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]}
+              ]
+            },
+            {
+              "floorNumber": 4,
+              "rooms": [
+                {"roomNumber": "A401", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A402", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A403", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A404", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A405", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A406", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A407", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A408", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A409", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A410", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A411", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A412", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A413", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A414", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A415", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]}
+              ]
+            },
+            {
+              "floorNumber": 5,
+              "rooms": [
+                {"roomNumber": "A501", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A502", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A503", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A504", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A505", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A506", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A507", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A508", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A509", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A510", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A511", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A512", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A513", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A514", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A515", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]}
+              ]
+            },
+            {
+              "floorNumber": 6,
+              "rooms": [
+                {"roomNumber": "A601", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A602", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A603", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A604", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A605", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A606", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A607", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A608", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A609", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A610", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A611", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A612", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A613", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A614", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A615", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]}
+              ]
+            },
+            {
+              "floorNumber": 7,
+              "rooms": [
+                {"roomNumber": "A701", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A702", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A703", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A704", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A705", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A706", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A707", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A708", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A709", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A710", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A711", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A712", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A713", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A714", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "A715", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]}
+              ]
+            } 
+          ]
+        },
+        {
+          "wingName": "B",
+          "bedType": "3 Bedded Non-AC Flat Bed",
+          "bedsPerRoom": 3,
+          "floors": [
+            {
+              "floorNumber": 0,
+              "rooms": [
+                  {"roomNumber": "B001", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "B002", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "B003", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "B004", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "B005", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "B006", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "B007", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "B008", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "B009", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "B010", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "B011", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "B012", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "B013", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "B014", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                  {"roomNumber": "B015", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]}
+              ]
+            },
+            {
+              "floorNumber": 1,
+              "rooms": [
+                {"roomNumber": "B101", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B102", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B103", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B104", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B105", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B106", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B107", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B108", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B109", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B110", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B111", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B112", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B113", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B114", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B115", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]}
+              ]
+            },
+            {
+              "floorNumber": 3,
+              "rooms": [
+                {"roomNumber": "B301", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B302", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B303", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B304", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B305", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B306", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B307", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B308", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B309", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B310", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B311", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B312", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B313", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B314", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B315", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]}
+              ]
+            },
+            {
+              "floorNumber": 4,
+              "rooms": [
+                {"roomNumber": "B401", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B402", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B403", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B404", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B405", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B406", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B407", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B408", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B409", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B410", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B411", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B412", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B413", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B414", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B415", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]}
+              ]
+            },
+            {
+              "floorNumber": 5,
+              "rooms": [
+                {"roomNumber": "B501", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B502", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B503", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B504", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B505", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B506", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B507", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B508", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B509", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B510", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B511", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B512", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B513", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B514", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B515", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]}
+              ]
+            },
+            {
+              "floorNumber": 6,
+              "rooms": [
+                {"roomNumber": "B601", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B602", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B603", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B604", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B605", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B606", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B607", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B608", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B609", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B610", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B611", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B612", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B613", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B614", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B615", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]}
+              ]
+            },
+            {
+              "floorNumber": 7,
+              "rooms": [
+                {"roomNumber": "B701", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B702", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B703", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B704", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B705", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B706", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B707", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B708", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B709", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B710", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B711", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B712", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B713", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B714", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]},
+                {"roomNumber": "B715", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }]}
+              ]
+            }                 
+          ]
+        },
+        {
+          "wingName": "C",
+          "bedType": "4 Bedded AC Bunk Bed",
+          "bedsPerRoom": 4,
+          "floors": [
+              {
+                  "floorNumber": 0,
+                  "rooms": [
+                      {"roomNumber": "C001", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "C002", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "C003", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "C004", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "C005", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "C006", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "C007", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "C008", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "C009", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "C010", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "C011", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "C012", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "C013", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "C014", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "C015", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]}
+                  ]
+                },
+                {
+                  "floorNumber": 1,
+                  "rooms": [
+                    {"roomNumber": "C101", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C102", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C103", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C104", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C105", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C106", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C107", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C108", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C109", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C110", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C111", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C112", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C113", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C114", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C115", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]}
+                  ]
+                },
+                {
+                  "floorNumber": 3,
+                  "rooms": [
+                    {"roomNumber": "C301", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C302", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C303", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C304", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C305", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C306", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C307", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C308", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C309", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C310", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C311", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C312", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C313", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C314", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C315", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]}
+                  ]
+                },
+                {
+                  "floorNumber": 4,
+                  "rooms": [
+                    {"roomNumber": "C401", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C402", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C403", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C404", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C405", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C406", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C407", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C408", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C409", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C410", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C411", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C412", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C413", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C414", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C415", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]}
+                  ]
+                },
+                {
+                  "floorNumber": 5,
+                  "rooms": [
+                    {"roomNumber": "C501", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C502", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C503", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C504", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C505", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C506", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C507", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C508", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C509", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C510", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C511", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C512", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C513", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C514", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C515", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]}
+                  ]
+                },
+                {
+                  "floorNumber": 6,
+                  "rooms": [
+                    {"roomNumber": "C601", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C602", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C603", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C604", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C605", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C606", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C607", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C608", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C609", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C610", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C611", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C612", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C613", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C614", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C615", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]}
+                  ]
+                },
+                {
+                  "floorNumber": 7,
+                  "rooms": [
+                    {"roomNumber": "C701", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C702", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C703", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C704", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C705", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C706", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C707", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C708", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C709", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C710", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C711", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C712", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C713", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C714", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "C715", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]}
+                  ]
+                }
+          ]
+        },
+        {
+          "wingName": "D",
+          "bedType": "4 Bedded AC Bunk Bed",
+          "bedsPerRoom": 4,
+          "floors": [
+              {
+                  "floorNumber": 0,
+                  "rooms": [
+                      {"roomNumber": "D001", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "D002", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "D003", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "D004", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "D005", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "D006", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "D007", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "D008", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "D009", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "D010", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "D011", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "D012", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "D013", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "D014", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                      {"roomNumber": "D015", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]}
+                  ]
+                },
+                {
+                  "floorNumber": 1,
+                  "rooms": [
+                    {"roomNumber": "D101", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D102", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D103", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D104", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D105", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D106", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D107", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D108", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D109", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D110", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D111", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D112", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D113", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D114", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D115", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]}
+                  ]
+                },
+                {
+                  "floorNumber": 3,
+                  "rooms": [
+                    {"roomNumber": "D301", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D302", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D303", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D304", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D305", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D306", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D307", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D308", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D309", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D310", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D311", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D312", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D313", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D314", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D315", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]}
+                  ]
+                },
+                {
+                  "floorNumber": 4,
+                  "rooms": [
+                    {"roomNumber": "D401", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D402", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D403", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D404", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D405", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D406", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D407", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D408", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D409", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D410", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D411", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D412", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D413", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D414", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D415", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]}
+                  ]
+                },
+                {
+                  "floorNumber": 5,
+                  "rooms": [
+                    {"roomNumber": "D501", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D502", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D503", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D504", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D505", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D506", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D507", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D508", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D509", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D510", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D511", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D512", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D513", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D514", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D515", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]}
+                  ]
+                },
+                {
+                  "floorNumber": 6,
+                  "rooms": [
+                    {"roomNumber": "D601", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D602", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D603", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D604", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D605", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D606", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D607", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D608", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D609", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D610", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D611", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D612", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D613", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D614", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D615", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]}
+                  ]
+                },
+                {
+                  "floorNumber": 7,
+                  "rooms": [
+                    {"roomNumber": "D701", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D702", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D703", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D704", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D705", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D706", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D707", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D708", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D709", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D710", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D711", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D712", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D713", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D714", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]},
+                    {"roomNumber": "D715", "beds": [{ "bedNumber": 1, "regNo": null }, { "bedNumber": 2, "regNo": null }, { "bedNumber": 3, "regNo": null }, { "bedNumber": 4, "regNo": null }]}
+                  ]
+                }
+          ]
+        }
+      ]    
+}
