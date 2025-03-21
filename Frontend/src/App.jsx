@@ -5,7 +5,7 @@ import LandingPage from './components/LandingPage';
 import Login from './components/LoginPage';
 import Profile from './components/ProfilePage';
 import HostelSelectionPage from './components/HostelSelection';
-import RoomSelectionPage from './components/BoysBlock1';
+import RoomSelectionPage from './components/BookRoom';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
