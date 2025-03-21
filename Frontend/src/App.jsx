@@ -7,6 +7,7 @@ import Profile from './components/ProfilePage';
 import HostelSelectionPage from './components/HostelSelection';
 import RoomSelectionPage from './components/BookRoom';
 import ComplaintPage from './components/complaint'; // Importing the Complaint Page
+import HostelFeeStructure from './components/HostelFeeStructure';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -21,8 +22,10 @@ function App() {
         }
     }, []);
   
+
     const handleLogout = () => {
         localStorage.removeItem('token');
+        localStorage.removeItem('username');
         setIsLoggedIn(false);
         setUsername('');
     };
@@ -44,6 +47,41 @@ function App() {
                 <Route path="/select-room/:hostelName" element={<RoomSelectionPage />} />
                 <Route path="/complaint" element={<ComplaintPage />} /> {/* New Route for Complaint Page */}
             </Routes>
+            <div className="min-h-screen flex flex-col">
+                <Navbar 
+                    isLoggedIn={isLoggedIn} 
+                    setIsLoggedIn={setIsLoggedIn}
+                    username={username}
+                    setUsername={setUsername}
+                    handleLogout={handleLogout}
+                />
+                <div className="flex-1 mt-[10vh]"> {/* Added margin-top to account for fixed navbar */}
+                    <Routes>
+                        <Route path="/" element={<LandingPage />} />
+                        <Route 
+                            path="/login" 
+                            element={
+                                <Login 
+                                    setIsLoggedIn={setIsLoggedIn} 
+                                    setUsername={setUsername} 
+                                />
+                            } 
+                        />
+                        <Route 
+                            path="/profile" 
+                            element={
+                                <Profile 
+                                    handleLogout={handleLogout}
+                                    username={username}
+                                />
+                            } 
+                        />
+                        <Route path="/hostels" element={<HostelSelectionPage />} />
+                        <Route path="/select-room/:hostelName" element={<RoomSelectionPage />} />
+                        <Route path="/hostel-fee" element={<HostelFeeStructure />} />
+                    </Routes>
+                </div>
+            </div>
         </Router>
     );
 }
