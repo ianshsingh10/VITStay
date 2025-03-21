@@ -7,8 +7,6 @@ import Profile from './components/ProfilePage';
 import HostelSelectionPage from './components/HostelSelection';
 import RoomSelectionPage from './components/BoysBlock1';
 import HostelFeeStructure from './components/HostelFeeStructure';
-import WardenDetails from './components/WardenDetails';
-import Instructions from './components/Instructions'; // Add this import
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -40,16 +38,30 @@ function App() {
                     setUsername={setUsername}
                     handleLogout={handleLogout}
                 />
-                <div className="flex-1">
+                <div className="flex-1 mt-[10vh]"> {/* Added margin-top to account for fixed navbar */}
                     <Routes>
                         <Route path="/" element={<LandingPage />} />
-                        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} />} />
-                        <Route path="/profile" element={<Profile handleLogout={handleLogout} username={username} />} />
-                        <Route path="/instructions" element={<Instructions />} /> {/* Add this route */}
+                        <Route 
+                            path="/login" 
+                            element={
+                                <Login 
+                                    setIsLoggedIn={setIsLoggedIn} 
+                                    setUsername={setUsername} 
+                                />
+                            } 
+                        />
+                        <Route 
+                            path="/profile" 
+                            element={
+                                <Profile 
+                                    handleLogout={handleLogout}
+                                    username={username}
+                                />
+                            } 
+                        />
                         <Route path="/hostels" element={<HostelSelectionPage />} />
                         <Route path="/select-room/:hostelName" element={<RoomSelectionPage />} />
                         <Route path="/hostel-fee" element={<HostelFeeStructure />} />
-                        <Route path="/warden-details" element={<WardenDetails />} />
                     </Routes>
                 </div>
             </div>
