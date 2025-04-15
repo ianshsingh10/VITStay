@@ -10,6 +10,7 @@ import ComplaintPage from "./components/complaint"; // Importing the Complaint P
 import HostelFeeStructure from "./components/HostelFeeStructure";
 import Instructions from "./components/Instructions";
 import WardenDetails from "./components/WardenDetails";
+import RoomView3D from "./components/RoomView3D";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -33,36 +34,41 @@ function App() {
 
   return (
     <Router>
-      <Navbar
-        isLoggedIn={isLoggedIn}
-        username={username}
-        setIsLoggedIn={setIsLoggedIn}
-        setUsername={setUsername}
-        handleLogout={handleLogout}
-      />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route
-          path="/login"
-          element={
-            <Login setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} />
-          }
+      <div className="min-h-screen bg-gray-100">
+        <Navbar
+          isLoggedIn={isLoggedIn}
+          username={username}
+          setIsLoggedIn={setIsLoggedIn}
+          setUsername={setUsername}
+          handleLogout={handleLogout}
         />
-        <Route
-          path="/profile"
-          element={<Profile handleLogout={handleLogout} />}
-        />
-        <Route path="/hostels" element={<HostelSelectionPage />} />
-        <Route
-          path="/select-room/:hostelName"
-          element={<RoomSelectionPage />}
-        />
-        <Route path="/complaint" element={<ComplaintPage />} />{" "}
-        {/* New Route for Complaint Page */}
-        <Route path="/hostel-fee" element={<HostelFeeStructure />} />
-        <Route path="/instructions" element={<Instructions />} />
-        <Route path="/warden-details" element={<WardenDetails />} />
-      </Routes>
+        <div className="pt-[12vh]"> {/* Added padding to account for fixed navbar */}
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route
+              path="/login"
+              element={
+                <Login setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} />
+              }
+            />
+            <Route
+              path="/profile"
+              element={<Profile handleLogout={handleLogout} />}
+            />
+            <Route path="/hostels" element={<HostelSelectionPage />} />
+            <Route
+              path="/select-room/:hostelName"
+              element={<RoomSelectionPage />}
+            />
+            <Route path="/complaint" element={<ComplaintPage />} />{" "}
+            {/* New Route for Complaint Page */}
+            <Route path="/hostel-fee" element={<HostelFeeStructure />} />
+            <Route path="/instructions" element={<Instructions />} />
+            <Route path="/warden-details" element={<WardenDetails />} />
+            <Route path="/room-view-3d" element={<RoomView3D />} />
+          </Routes>
+        </div>
+      </div>
     </Router>
   );
 }

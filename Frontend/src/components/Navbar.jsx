@@ -42,7 +42,7 @@ function Navbar({ isLoggedIn, setIsLoggedIn, setUsername, username, handleLogout
                     <NavLink to="/hostels" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
                         HOSTEL PREFERENCES
                     </NavLink>
-                    <NavLink to="/room-view" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
+                    <NavLink to="/room-view-3d" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
                         ROOM VIEW 3D
                     </NavLink>
                     <NavLink to="/final-allotment" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
