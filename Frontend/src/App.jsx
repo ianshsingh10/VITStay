@@ -11,6 +11,7 @@ import HostelFeeStructure from "./components/HostelFeeStructure";
 import Instructions from "./components/Instructions";
 import WardenDetails from "./components/WardenDetails";
 import RoomPage from "./components/RoomPage";
+import RoomViewPage from "./components/RoomViewPage";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -63,6 +64,7 @@ function App() {
         <Route path="/instructions" element={<Instructions />} />
         <Route path="/warden-details" element={<WardenDetails />} />
         <Route path="/room-view" element={<RoomPage />} />
+        <Route path="/room-view/:bedtype" element={<RoomViewPage />} />
       </Routes>
     </Router>
   );
