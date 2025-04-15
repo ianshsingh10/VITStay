@@ -10,6 +10,7 @@ import ComplaintPage from "./components/complaint"; // Importing the Complaint P
 import HostelFeeStructure from "./components/HostelFeeStructure";
 import Instructions from "./components/Instructions";
 import WardenDetails from "./components/WardenDetails";
+import RoomPage from "./components/RoomPage";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -57,11 +58,11 @@ function App() {
           path="/select-room/:hostelName"
           element={<RoomSelectionPage />}
         />
-        <Route path="/complaint" element={<ComplaintPage />} />{" "}
-        {/* New Route for Complaint Page */}
+        <Route path="/complaint" element={<ComplaintPage />} />
         <Route path="/hostel-fee" element={<HostelFeeStructure />} />
         <Route path="/instructions" element={<Instructions />} />
         <Route path="/warden-details" element={<WardenDetails />} />
+        <Route path="/room-view" element={<RoomPage />} />
       </Routes>
     </Router>
   );
