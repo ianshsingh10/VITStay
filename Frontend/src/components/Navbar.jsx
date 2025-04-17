@@ -45,8 +45,8 @@ function Navbar({ isLoggedIn, setIsLoggedIn, setUsername, username, handleLogout
                     <NavLink to="/room-view" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
                         ROOM VIEW 3D
                     </NavLink>
-                    <NavLink to="/final-allotment" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
-                        FINAL ROOM ALLOTMENT
+                    <NavLink to="/complaint" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
+                        COMPLAINT
                     </NavLink>
                 </div>
 
