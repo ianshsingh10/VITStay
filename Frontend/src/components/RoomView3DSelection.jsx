@@ -10,21 +10,21 @@ const RoomView3DSelection = () => {
     const hostels = [
         { id: 'gh1', name: 'Girls Hostel Block 1' },
         { id: 'gh2', name: 'Girls Hostel Block 2' },
-        { id: 'gh3', name: 'Girls Hostel Block 3' },
         { id: 'bh1', name: 'Boys Hostel Block 1' },
         { id: 'bh2', name: 'Boys Hostel Block 2' },
+        { id: 'bh3', name: 'Boys Hostel Block 3' },
     ];
 
     const roomTypes = [
-        { id: '1', name: '1 Seater' },
-        { id: '2', name: '2 Seater' },
-        { id: '3', name: '3 Seater' },
-        { id: '4', name: '4 Seater' },
+        { id: '1-bedflat', name: '1 Bed Flat' },
+        { id: '2-bedflat', name: '2 Bed Flat' },
+        { id: '3-bedflat', name: '3 Bed Flat' },
+        { id: '4-bedflat', name: '4 Bed Flat' },
     ];
 
     const handleView3D = () => {
         if (selectedHostel && selectedRoomType) {
-            navigate('/room-view-3d', {
+            navigate(`/room-view-3d/${selectedHostel}/${selectedRoomType}`, {
                 state: {
                     hostel: selectedHostel,
                     roomType: selectedRoomType

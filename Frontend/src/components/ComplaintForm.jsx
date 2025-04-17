@@ -103,7 +103,7 @@ const ComplaintForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
+    <div className="min-h-screen bg-gray-100 p-4 pt-[12vmin]">
       <div className="max-w-3xl mx-auto space-y-8">
 
         {/* Complaint Form */}

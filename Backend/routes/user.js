@@ -6,6 +6,7 @@ import { jwtSecret } from "../config.js";
 import { OAuth2Client } from "google-auth-library";
 import HostelRoom from "../models/hostel.js";
 import UserInfo from "../models/userinfo.js";
+import Complaint from "../models/complaint.js";
 
 const router = express.Router();
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
@@ -133,45 +134,6 @@ router.get("/profile", async (req, res) => {
 });
 
 // Route to fetch rooms by hostel name, wing name, and floor
-router.get("/:hostelName", async (req, res) => {
-  const { hostelName } = req.params;
-  const { floor } = req.query;
-
-  try {
-    const hostel = await HostelRoom.findOne({ name: hostelName });
-
-    if (!hostel) {
-      console.log(`Hostel with name "${hostelName}" not found.`);
-      return res.status(404).json({ message: "Hostel not found." });
-    }
-
-    let filteredRooms = [];
-
-    hostel.wing.forEach((wing) => {
-      wing.floors.forEach((floorObj) => {
-        if (floorObj.floorNumber === parseInt(floor)) {
-          filteredRooms.push(
-            ...floorObj.rooms.map((room) => ({
-              roomNumber: room.roomNumber,
-              beds: room.beds,
-            }))
-          );
-        }
-      });
-    });
-
-    if (filteredRooms.length === 0) {
-      return res
-        .status(404)
-        .json({ message: "No rooms found for the specified floor." });
-    }
-
-    res.json({ rooms: filteredRooms });
-  } catch (err) {
-    console.error("Error fetching rooms:", err);
-    res.status(500).send({ message: "Failed to fetch rooms." });
-  }
-});
 
 router.post("/book", async (req, res) => {
     const { roomNumber, bedIndex } = req.body;
@@ -240,6 +202,123 @@ router.post("/book", async (req, res) => {
     } catch (error) {
       console.error("Error booking the bed:", error);
       res.status(500).json({ message: "Error booking the bed." });
+    }
+  });
+
+  router.get("/hostel-info", async (req, res) => {
+    try {
+      const token = req.headers.authorization?.split(" ")[1];
+      if (!token) return res.status(401).json({ message: "Unauthorized" });
+  
+      const decoded = jwt.verify(token, jwtSecret);
+      const regNo = decoded.regNo;
+  
+      const user = await User.findOne({ regNo });
+      const userInfo = await UserInfo.findOne({ regNo });
+  
+      if (!user || !userInfo) {
+        console.log(`UserInfo not found for regNo: ${regNo}`);
+        return res.status(404).json({ message: "UserInfo not found" });
+      }
+  
+      res.status(200).json({
+        name: user.username,
+        block: userInfo.hostel,
+        roomNumber: userInfo.roomNumber,
+      });
+    } catch (err) {
+      console.error("Error fetching user hostel info:", err);
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+  
+  // Complaint route
+  router.post("/complaint", async (req, res) => {
+    try {
+      const token = req.headers.authorization?.split(" ")[1];
+      if (!token) return res.status(401).json({ message: "Unauthorized" });
+  
+      const decoded = jwt.verify(token, jwtSecret);
+      const regNo = decoded.regNo;
+  
+      const { name, block, roomNumber, serviceType, description } = req.body;
+  
+      // Check for missing fields in the request body
+      if (!name || !block || !roomNumber || !serviceType || !description) {
+        return res.status(400).json({ message: "All fields are required" });
+      }
+  
+      const complaint = new Complaint({
+        regNo,
+        name,
+        block,
+        roomNumber,
+        serviceType,
+        description,
+      });
+  
+      await complaint.save();
+      res.status(201).json({ message: "Complaint submitted successfully!" });
+    } catch (err) {
+      console.error("Error saving complaint:", err); // Log the full error
+      res.status(500).json({ message: "Internal server error", error: err.message });
+    }
+  });
+
+  router.get("/complaints", async (req, res) => {
+    try {
+      const token = req.headers.authorization?.split(" ")[1];
+      if (!token) return res.status(401).json({ message: "Unauthorized" });
+  
+      const decoded = jwt.verify(token, jwtSecret);
+      const regNo = decoded.regNo;
+  
+      const complaints = await Complaint.find({ regNo }).sort({ createdAt: -1 });
+  
+      res.status(200).json(complaints);
+    } catch (error) {
+      console.error("Error fetching complaints:", error);
+      res.status(500).json({ message: "Failed to fetch complaints" });
+    }
+  });
+  
+  router.get("/:hostelName", async (req, res) => {
+    const { hostelName } = req.params;
+    const { floor } = req.query;
+  
+    try {
+      const hostel = await HostelRoom.findOne({ name: hostelName });
+  
+      if (!hostel) {
+        console.log(`Hostel with name "${hostelName}" not found.`);
+        return res.status(404).json({ message: "Hostel not found." });
+      }
+  
+      let filteredRooms = [];
+  
+      hostel.wing.forEach((wing) => {
+        wing.floors.forEach((floorObj) => {
+          if (floorObj.floorNumber === parseInt(floor)) {
+            filteredRooms.push(
+              ...floorObj.rooms.map((room) => ({
+                roomNumber: room.roomNumber,
+                beds: room.beds,
+              }))
+            );
+          }
+        });
+      });
+  
+      if (filteredRooms.length === 0) {
+        return res
+          .status(404)
+          .json({ message: "No rooms found for the specified floor." });
+      }
+  
+      res.json({ rooms: filteredRooms });
+    } catch (err) {
+      console.error("Error fetching rooms:", err);
+      res.status(500).send({ message: "Failed to fetch rooms." });
     }
   });
   
