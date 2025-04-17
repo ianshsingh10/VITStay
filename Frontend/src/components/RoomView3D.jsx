@@ -159,13 +159,13 @@ const Room = () => {
       {[-4, 4].map((zPosition) => (
         <group key={`fan-${zPosition}`}>
           <Cylinder args={[0.1, 0.1, 0.5, 8]} position={[-4, 8.7, zPosition]}>
-            <meshStandardMaterial color="#c0c0c0" />
-          </Cylinder>
+        <meshStandardMaterial color="#c0c0c0" />
+      </Cylinder>
           <Box args={[4, 0.1, 0.5]} position={[-4, 8.5, zPosition]}>
-            <meshStandardMaterial color="#c0c0c0" />
-          </Box>
+        <meshStandardMaterial color="#c0c0c0" />
+      </Box>
           <Box args={[0.5, 0.1, 4]} position={[-4, 8.5, zPosition]}>
-            <meshStandardMaterial color="#c0c0c0" />
+        <meshStandardMaterial color="#c0c0c0" />
           </Box>
         </group>
       ))}
@@ -325,21 +325,21 @@ const SingleRoom = () => {
       {/* Single Ceiling Fan */}
       <group>
         <Cylinder args={[0.1, 0.1, 0.5, 8]} position={[-4, 8.7, 0]}>
-          <meshStandardMaterial color="#c0c0c0" />
-        </Cylinder>
+        <meshStandardMaterial color="#c0c0c0" />
+      </Cylinder>
         <Box args={[4, 0.1, 0.5]} position={[-4, 8.5, 0]}>
-          <meshStandardMaterial color="#c0c0c0" />
-        </Box>
+        <meshStandardMaterial color="#c0c0c0" />
+      </Box>
         <Box args={[0.5, 0.1, 4]} position={[-4, 8.5, 0]}>
-          <meshStandardMaterial color="#c0c0c0" />
-        </Box>
+        <meshStandardMaterial color="#c0c0c0" />
+      </Box>
       </group>
 
       {/* Window and Curtain */}
       <group>
         {/* Window Frame */}
         <Box args={[0.3, 5, 3]} position={[5.85, 4.5, 0]}>
-          <meshStandardMaterial color="#ffffff" />
+        <meshStandardMaterial color="#ffffff" />
         </Box>
         {/* Window Glass */}
         <Box args={[0.1, 4.8, 2.8]} position={[5.85, 4.5, 0]}>
@@ -629,10 +629,10 @@ const TwoSeaterRoom = () => {
           <Box args={[0.1, 4.8, 2.8]} position={[0, 4.5, zPosition + 7]}>
             <meshStandardMaterial color="#87CEEB" transparent opacity={0.3} />
           </Box>
-          {/* Curtain Rod */}
+      {/* Curtain Rod */}
           <Cylinder args={[0.05, 0.05, 4, 8]} rotation={[0, 0, Math.PI/2]} position={[0, 7, zPosition + 7]}>
-            <meshStandardMaterial color="#8b4513" />
-          </Cylinder>
+        <meshStandardMaterial color="#8b4513" />
+      </Cylinder>
           {/* Curtains */}
           <Box args={[0.1, 5, 1.5]} position={[0, 4.5, zPosition + 6]}>
             <meshStandardMaterial color="#FFE4E1" transparent opacity={0.8} />
@@ -847,34 +847,34 @@ const RoomView3D = () => {
   }
 
   if ((hostel === 'gh1' || hostel === 'gh2') && roomType === '3') {
-    return (
-      <div className="w-full h-[calc(100vh-12vh)] bg-gray-100">
-        <div className="absolute top-4 left-4 z-10 bg-white/80 p-4 rounded-lg shadow-md">
+  return (
+    <div className="w-full h-[calc(100vh-12vh)] bg-gray-100">
+      <div className="absolute top-4 left-4 z-10 bg-white/80 p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-bold mb-2">
             {hostel === 'gh1' ? 'Girls Hostel Block 1' : 'Girls Hostel Block 2'} - Three Bedded Room
           </h2>
-          <p className="text-sm text-gray-600">
-            Use mouse to interact:<br />
-            • Left click + drag to rotate<br />
-            • Right click + drag to pan<br />
-            • Scroll to zoom
-          </p>
-        </div>
-        <Canvas camera={{ position: [20, 15, 20], fov: 45 }}>
-          <ambientLight intensity={0.7} />
-          <pointLight position={[0, 8, 0]} intensity={0.5} />
-          <pointLight position={[-6, 6, -8]} intensity={0.3} color="#ffd700" />
-          <pointLight position={[-6, 6, 0]} intensity={0.3} color="#ffd700" />
-          <pointLight position={[-6, 6, 8]} intensity={0.3} color="#ffd700" />
-          <Environment preset="apartment" />
-          <Room />
-          <OrbitControls 
-            enableZoom={true}
-            maxPolarAngle={Math.PI / 2}
-            minDistance={8}
-            maxDistance={40}
-          />
-        </Canvas>
+        <p className="text-sm text-gray-600">
+          Use mouse to interact:<br />
+          • Left click + drag to rotate<br />
+          • Right click + drag to pan<br />
+          • Scroll to zoom
+        </p>
+      </div>
+      <Canvas camera={{ position: [20, 15, 20], fov: 45 }}>
+        <ambientLight intensity={0.7} />
+        <pointLight position={[0, 8, 0]} intensity={0.5} />
+        <pointLight position={[-6, 6, -8]} intensity={0.3} color="#ffd700" />
+        <pointLight position={[-6, 6, 0]} intensity={0.3} color="#ffd700" />
+        <pointLight position={[-6, 6, 8]} intensity={0.3} color="#ffd700" />
+        <Environment preset="apartment" />
+        <Room />
+        <OrbitControls 
+          enableZoom={true}
+          maxPolarAngle={Math.PI / 2}
+          minDistance={8}
+          maxDistance={40}
+        />
+      </Canvas>
       </div>
     );
   }

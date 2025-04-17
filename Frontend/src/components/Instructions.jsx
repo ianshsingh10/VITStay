@@ -48,7 +48,7 @@ const Instructions = () => {
             </div>
 
             {/* Footer */}
-            <div className="fixed bottom-0 w-full bg-[#2B4B7E] text-white text-center py-3">
+            <div className="mt-2 w-full bg-[#2B4B7E] text-white text-center py-3">
                 <p>For any queries contact admissions@vitbhopal.ac.in</p>
             </div>
         </div>
