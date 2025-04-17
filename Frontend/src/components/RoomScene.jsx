@@ -21,7 +21,7 @@ export default function RoomScene({ bedType }) {
   const navigate = useNavigate();
 
   return (
-    <div className="relative w-full h-screen bg-red-200">
+    <div className="relative w-full h-screen bg-black">
       {/* Back Button */}
       <button
         className="absolute top-[12vmin] left-4 z-10 bg-white text-blue-600 font-medium px-4 py-2 rounded shadow hover:bg-blue-100"
