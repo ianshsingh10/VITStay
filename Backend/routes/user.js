@@ -136,7 +136,7 @@ router.get("/profile", async (req, res) => {
 // Route to fetch rooms by hostel name, wing name, and floor
 
 router.post("/book", async (req, res) => {
-    const { roomNumber, bedIndex } = req.body;
+    const { roomNumber, bedIndex, hostelName } = req.body;
     const token = req.headers.authorization?.split(" ")[1]; // Extract the token from headers
   
     if (!token)
@@ -150,13 +150,15 @@ router.post("/book", async (req, res) => {
       const userRegNo = decoded.regNo;
   
       const hostel = await HostelRoom.findOne({
-        "wing.floors.rooms.roomNumber": roomNumber,
+        name: hostelName,
+        "wing.floors.rooms.roomNumber": roomNumber
       });
+      
   
       if (!hostel) return res.status(404).json({ message: "Room not found." });
   
       let roomFound = false;
-      let floorName, wingName, hostelName; // Store block, wing, and hostel name
+      let floorName, wingName; // Store block, wing, and hostel name
   
       hostel.wing.forEach((wing) => {
         wing.floors.forEach((floor) => {
@@ -164,7 +166,6 @@ router.post("/book", async (req, res) => {
             if (room.roomNumber === roomNumber) {
               roomFound = true;
               wingName = wing.wingName;
-              hostelName = hostel.name;
               floorName= (floor.floorNumber==0)?"Ground":floor.floorNumber; // Storing the hostel name
   
               if (room.beds[bedIndex].regNo) {
