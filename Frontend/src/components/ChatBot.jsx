@@ -1,147 +1,212 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Send, X, MessageSquare, HelpCircle, Home, Calendar, CreditCard, Info } from 'lucide-react';
 
-const ChatBot = () => {
+const Chatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
         {
-            text: "Hello! Welcome to VIT Bhopal Hostel Support. How can I help you today?",
-            sender: "bot"
+            type: 'bot',
+            content: 'Hello! I\'m your VITStay assistant. How can I help you today?',
+            timestamp: new Date()
         }
     ]);
-    const [inputMessage, setInputMessage] = useState('');
+    const [inputValue, setInputValue] = useState('');
+    const messagesEndRef = useRef(null);
+    const inputRef = useRef(null);
 
-    // Predefined responses for common questions
-    const predefinedResponses = {
-        'hostel fee': 'The hostel fee varies based on room type. Single AC rooms cost ₹1,85,000, while Non-AC rooms range from ₹1,25,000 to ₹1,45,000 per year.',
-        'room types': 'We offer Single, Double, Triple, and Four-seater rooms in both AC and Non-AC variants.',
-        'mess': 'The mess facility is compulsory for all hostel residents. The mess fee is included in the hostel charges.',
-        'counselling': 'Hostel counselling process involves selecting your preferred room type in order of priority. Please check the instructions page for detailed information.',
-        'contact': 'For queries, please contact the Chief Warden Office at +91-XXX-XXXXXXX or email at hostelsupport@vitbhopal.ac.in',
-    };
+    // Auto-scroll to bottom when new messages arrive
+    useEffect(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, [messages]);
 
-    const handleSendMessage = (e) => {
-        e.preventDefault();
-        if (!inputMessage.trim()) return;
+    // Focus input when chat is opened
+    useEffect(() => {
+        if (isOpen) {
+            setTimeout(() => {
+                inputRef.current?.focus();
+            }, 300);
+        }
+    }, [isOpen]);
+
+    const handleSendMessage = () => {
+        if (inputValue.trim() === '') return;
 
         // Add user message
-        const newMessages = [...messages, { text: inputMessage, sender: "user" }];
-        setMessages(newMessages);
-        setInputMessage('');
+        const userMessage = {
+            type: 'user',
+            content: inputValue,
+            timestamp: new Date()
+        };
+        
+        setMessages(prev => [...prev, userMessage]);
+        setInputValue('');
 
-        // Check for predefined responses
-        const lowerCaseInput = inputMessage.toLowerCase();
-        let botResponse = "I apologize, but I don't have specific information about that. Please contact the hostel office for more details.";
-
-        // Check if the input contains any keywords from predefined responses
-        for (const [keyword, response] of Object.entries(predefinedResponses)) {
-            if (lowerCaseInput.includes(keyword)) {
-                botResponse = response;
-                break;
-            }
-        }
-
-        // Add bot response after a small delay
+        // Simulate bot response after a short delay
         setTimeout(() => {
-            setMessages([...newMessages, {
-                text: botResponse,
-                sender: "bot"
+            const botResponse = getBotResponse(inputValue.toLowerCase());
+            setMessages(prev => [...prev, {
+                type: 'bot',
+                content: botResponse,
+                timestamp: new Date()
             }]);
-        }, 1000);
+        }, 500);
+    };
+
+    const getBotResponse = (userInput) => {
+        // Simple keyword-based responses
+        if (userInput.includes('hello') || userInput.includes('hi') || userInput.includes('hey')) {
+            return 'Hello! How can I assist you with your hostel needs today?';
+        }
+        
+        if (userInput.includes('room') || userInput.includes('accommodation')) {
+            return 'We offer various room types: 1-seater, 2-seater, 3-seater, and 4-seater rooms. You can view 3D models of each room type by going to the "3D Room View" section.';
+        }
+        
+        if (userInput.includes('fee') || userInput.includes('cost') || userInput.includes('price')) {
+            return 'Hostel fees vary by room type. You can find detailed fee information in the "Hostel Fee Structure" section.';
+        }
+        
+        if (userInput.includes('book') || userInput.includes('reserve') || userInput.includes('apply')) {
+            return 'To book a room, please select a hostel block and room type from the "Book Room" section. Make sure you\'re logged in to complete the booking process.';
+        }
+        
+        if (userInput.includes('complaint') || userInput.includes('issue') || userInput.includes('problem')) {
+            return 'If you have any complaints or issues, please use the "Complaint" section to submit them. Our team will address them promptly.';
+        }
+        
+        if (userInput.includes('warden') || userInput.includes('contact')) {
+            return 'You can find contact information for hostel wardens in the "Warden Details" section.';
+        }
+        
+        if (userInput.includes('thank')) {
+            return 'You\'re welcome! Is there anything else I can help you with?';
+        }
+        
+        if (userInput.includes('bye') || userInput.includes('goodbye')) {
+            return 'Goodbye! Have a great day!';
+        }
+        
+        // Default response for unrecognized queries
+        return 'I\'m not sure I understand. You can ask me about room types, booking process, fees, complaints, or warden details.';
+    };
+
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSendMessage();
+        }
+    };
+
+    const quickReplies = [
+        { text: 'Room Types', icon: <Home size={16} /> },
+        { text: 'Booking Process', icon: <Calendar size={16} /> },
+        { text: 'Fee Structure', icon: <CreditCard size={16} /> },
+        { text: 'How to Complain', icon: <Info size={16} /> }
+    ];
+
+    const handleQuickReply = (text) => {
+        setInputValue(text);
+        setTimeout(() => {
+            handleSendMessage();
+        }, 100);
     };
 
     return (
-        <div className="fixed bottom-4 right-4 z-50">
-            {/* Chat Button */}
-            <button
+        <>
+            {/* Chat Toggle Button */}
+            <motion.button
+                className="fixed bottom-6 right-6 bg-[#2B4B7E] text-white p-4 rounded-full shadow-lg z-50"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 onClick={() => setIsOpen(!isOpen)}
-                className="bg-[#2B4B7E] text-white rounded-full p-4 shadow-lg hover:bg-[#1a3a6d] transition-colors"
             >
-                {isOpen ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                    </svg>
-                )}
-            </button>
+                {isOpen ? <X size={24} /> : <MessageSquare size={24} />}
+            </motion.button>
 
             {/* Chat Window */}
-            {isOpen && (
-                <div className="absolute bottom-16 right-0 w-96 h-[500px] bg-white rounded-lg shadow-xl flex flex-col">
-                    {/* Header */}
-                    <div className="bg-[#2B4B7E] text-white p-4 rounded-t-lg">
-                        <h3 className="font-semibold">VIT Bhopal Hostel Support</h3>
-                        <p className="text-sm opacity-75">Ask us anything about hostels</p>
-                    </div>
-
-                    {/* Messages */}
-                    <div className="flex-1 p-4 overflow-y-auto space-y-4">
-                        {messages.map((message, index) => (
-                            <div
-                                key={index}
-                                className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-                            >
-                                <div
-                                    className={`max-w-[80%] p-3 rounded-lg ${
-                                        message.sender === 'user'
-                                            ? 'bg-[#2B4B7E] text-white'
-                                            : 'bg-gray-100 text-gray-800'
-                                    }`}
-                                >
-                                    {message.text}
-                                </div>
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 20, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className="fixed bottom-24 right-6 w-96 h-[500px] bg-white rounded-lg shadow-xl z-50 flex flex-col overflow-hidden"
+                    >
+                        {/* Chat Header */}
+                        <div className="bg-[#2B4B7E] text-white p-4 flex items-center justify-between">
+                            <div className="flex items-center">
+                                <MessageSquare size={20} className="mr-2" />
+                                <h3 className="font-semibold">VITStay Assistant</h3>
                             </div>
-                        ))}
-                    </div>
-
-                    {/* Suggestion Chips */}
-                    <div className="px-4 py-2 border-t border-gray-200">
-                        <div className="flex gap-2 overflow-x-auto pb-2">
-                            <button 
-                                onClick={() => setInputMessage("What are the hostel fees?")}
-                                className="whitespace-nowrap px-3 py-1 bg-gray-100 rounded-full text-sm hover:bg-gray-200"
-                            >
-                                Hostel Fees
-                            </button>
-                            <button 
-                                onClick={() => setInputMessage("What room types are available?")}
-                                className="whitespace-nowrap px-3 py-1 bg-gray-100 rounded-full text-sm hover:bg-gray-200"
-                            >
-                                Room Types
-                            </button>
-                            <button 
-                                onClick={() => setInputMessage("Tell me about mess facility")}
-                                className="whitespace-nowrap px-3 py-1 bg-gray-100 rounded-full text-sm hover:bg-gray-200"
-                            >
-                                Mess Facility
+                            <button onClick={() => setIsOpen(false)}>
+                                <X size={20} />
                             </button>
                         </div>
-                    </div>
 
-                    {/* Input Form */}
-                    <form onSubmit={handleSendMessage} className="p-4 border-t">
-                        <div className="flex gap-2">
-                            <input
-                                type="text"
-                                value={inputMessage}
-                                onChange={(e) => setInputMessage(e.target.value)}
-                                placeholder="Type your message..."
-                                className="flex-1 p-2 border rounded-lg focus:outline-none focus:border-[#2B4B7E]"
-                            />
-                            <button
-                                type="submit"
-                                className="bg-[#2B4B7E] text-white px-4 py-2 rounded-lg hover:bg-[#1a3a6d] transition-colors"
-                            >
-                                Send
-                            </button>
+                        {/* Quick Replies */}
+                        <div className="p-2 bg-gray-50 border-b border-gray-200 flex flex-wrap gap-2">
+                            {quickReplies.map((reply, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => handleQuickReply(reply.text)}
+                                    className="flex items-center gap-1 bg-white text-gray-700 text-xs px-3 py-1.5 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors"
+                                >
+                                    {reply.icon}
+                                    <span>{reply.text}</span>
+                                </button>
+                            ))}
                         </div>
-                    </form>
-                </div>
-            )}
-        </div>
+
+                        {/* Messages Area */}
+                        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                            {messages.map((message, index) => (
+                                <div
+                                    key={index}
+                                    className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                                >
+                                    <div
+                                        className={`max-w-[80%] p-3 rounded-lg ${
+                                            message.type === 'user'
+                                                ? 'bg-[#2B4B7E] text-white rounded-br-none'
+                                                : 'bg-gray-100 text-gray-800 rounded-bl-none'
+                                        }`}
+                                    >
+                                        <p className="text-sm">{message.content}</p>
+                                        <p className="text-xs opacity-70 mt-1 text-right">
+                                            {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                            <div ref={messagesEndRef} />
+                        </div>
+
+                        {/* Input Area */}
+                        <div className="p-3 border-t border-gray-200">
+                            <div className="flex items-center">
+                                <input
+                                    ref={inputRef}
+                                    type="text"
+                                    value={inputValue}
+                                    onChange={(e) => setInputValue(e.target.value)}
+                                    onKeyPress={handleKeyPress}
+                                    placeholder="Type your message..."
+                                    className="flex-1 p-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-[#2B4B7E] focus:border-transparent"
+                                />
+                                <button
+                                    onClick={handleSendMessage}
+                                    className="bg-[#2B4B7E] text-white p-2 rounded-r-lg hover:bg-[#1a3a6d] transition-colors"
+                                >
+                                    <Send size={20} />
+                                </button>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </>
     );
 };
 
-export default ChatBot;
+export default Chatbot;

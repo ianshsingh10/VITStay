@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
@@ -831,6 +831,12 @@ const FourSeaterRoom = () => {
   );
 };
 
+const LoadingScreen = () => (
+  <div className="w-full h-full flex items-center justify-center bg-gray-100">
+    <div className="text-lg font-semibold text-gray-700">Loading 3D View...</div>
+  </div>
+);
+
 const RoomView3D = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -846,157 +852,70 @@ const RoomView3D = () => {
     return null;
   }
 
-  if ((hostel === 'gh1' || hostel === 'gh2') && roomType === '3') {
+  const getRoomComponent = () => {
+    if (hostel === 'gh1' || hostel === 'gh2') {
+      switch (roomType) {
+        case '1': return <SingleRoom />;
+        case '2': return <TwoSeaterRoom />;
+        case '3': return <Room />;
+        case '4': return <FourSeaterRoom />;
+        default: return null;
+      }
+    }
+    return null;
+  };
+
   return (
-    <div className="w-full h-[calc(100vh-12vh)] bg-gray-100">
+    <div className="w-full h-screen bg-gray-100">
       <div className="absolute top-4 left-4 z-10 bg-white/80 p-4 rounded-lg shadow-md">
-          <h2 className="text-xl font-bold mb-2">
-            {hostel === 'gh1' ? 'Girls Hostel Block 1' : 'Girls Hostel Block 2'} - Three Bedded Room
-          </h2>
+        <h2 className="text-xl font-bold mb-2">
+          {hostel === 'gh1' ? 'Girls Hostel Block 1' : 'Girls Hostel Block 2'} - {roomType} Seater Room
+        </h2>
         <p className="text-sm text-gray-600">
           Use mouse to interact:<br />
           • Left click + drag to rotate<br />
           • Right click + drag to pan<br />
           • Scroll to zoom
         </p>
+        <button
+          onClick={() => navigate('/room-view-3d-selection')}
+          className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+        >
+          Back to Selection
+        </button>
       </div>
-      <Canvas camera={{ position: [20, 15, 20], fov: 45 }}>
-        <ambientLight intensity={0.7} />
+      
+      <Suspense fallback={<LoadingScreen />}>
+        <Canvas
+          shadows
+          gl={{ antialias: true }}
+          camera={{
+            position: [15, 15, 15],
+            fov: 50,
+            near: 0.1,
+            far: 1000
+          }}
+          style={{ background: '#f0f0f0' }}
+        >
+          <ambientLight intensity={0.5} />
+          <directionalLight
+            position={[10, 10, 5]}
+            intensity={1}
+            castShadow
+            shadow-mapSize-width={1024}
+            shadow-mapSize-height={1024}
+          />
         <pointLight position={[0, 8, 0]} intensity={0.5} />
-        <pointLight position={[-6, 6, -8]} intensity={0.3} color="#ffd700" />
-        <pointLight position={[-6, 6, 0]} intensity={0.3} color="#ffd700" />
-        <pointLight position={[-6, 6, 8]} intensity={0.3} color="#ffd700" />
         <Environment preset="apartment" />
-        <Room />
+          {getRoomComponent()}
         <OrbitControls 
           enableZoom={true}
           maxPolarAngle={Math.PI / 2}
-          minDistance={8}
-          maxDistance={40}
-        />
-      </Canvas>
-      </div>
-    );
-  }
-
-  if ((hostel === 'gh1' || hostel === 'gh2') && roomType === '2') {
-    return (
-      <div className="w-full h-[calc(100vh-12vh)] bg-gray-100">
-        <div className="absolute top-4 left-4 z-10 bg-white/80 p-4 rounded-lg shadow-md">
-          <h2 className="text-xl font-bold mb-2">
-            {hostel === 'gh1' ? 'Girls Hostel Block 1' : 'Girls Hostel Block 2'} - Two Bedded Room
-          </h2>
-          <p className="text-sm text-gray-600">
-            Use mouse to interact:<br />
-            • Left click + drag to rotate<br />
-            • Right click + drag to pan<br />
-            • Scroll to zoom
-          </p>
-        </div>
-        <Canvas camera={{ position: [18, 12, 18], fov: 45 }}>
-          <ambientLight intensity={0.7} />
-          <pointLight position={[0, 8, 0]} intensity={0.5} />
-          <pointLight position={[-6, 6, -6]} intensity={0.3} color="#ffd700" />
-          <pointLight position={[6, 6, 6]} intensity={0.3} color="#ffd700" />
-          <Environment preset="apartment" />
-          <TwoSeaterRoom />
-          <OrbitControls 
-            enableZoom={true}
-            maxPolarAngle={Math.PI / 2}
-            minDistance={6}
-            maxDistance={35}
-          />
-        </Canvas>
-      </div>
-    );
-  }
-
-  if ((hostel === 'gh1' || hostel === 'gh2') && roomType === '1') {
-    return (
-      <div className="w-full h-[calc(100vh-12vh)] bg-gray-100">
-        <div className="absolute top-4 left-4 z-10 bg-white/80 p-4 rounded-lg shadow-md">
-          <h2 className="text-xl font-bold mb-2">
-            {hostel === 'gh1' ? 'Girls Hostel Block 1' : 'Girls Hostel Block 2'} - Single Bedded Room
-          </h2>
-          <p className="text-sm text-gray-600">
-            Use mouse to interact:<br />
-            • Left click + drag to rotate<br />
-            • Right click + drag to pan<br />
-            • Scroll to zoom
-          </p>
-        </div>
-        <Canvas camera={{ position: [15, 10, 15], fov: 45 }}>
-          <ambientLight intensity={0.7} />
-          <pointLight position={[0, 8, 0]} intensity={0.5} />
-          <pointLight position={[-6, 6, -4]} intensity={0.3} color="#ffd700" />
-          <pointLight position={[-6, 6, 4]} intensity={0.3} color="#ffd700" />
-          <Environment preset="apartment" />
-          <SingleRoom />
-          <OrbitControls 
-            enableZoom={true}
-            maxPolarAngle={Math.PI / 2}
             minDistance={5}
             maxDistance={30}
-          />
-        </Canvas>
-      </div>
-    );
-  }
-
-  if ((hostel === 'gh1' || hostel === 'gh2') && roomType === '4') {
-    return (
-      <div className="w-full h-[calc(100vh-12vh)] bg-gray-100">
-        <div className="absolute top-4 left-4 z-10 bg-white/80 p-4 rounded-lg shadow-md">
-          <h2 className="text-xl font-bold mb-2">
-            {hostel === 'gh1' ? 'Girls Hostel Block 1' : 'Girls Hostel Block 2'} - Four Bedded Room
-          </h2>
-          <p className="text-sm text-gray-600">
-            Use mouse to interact:<br />
-            • Left click + drag to rotate<br />
-            • Right click + drag to pan<br />
-            • Scroll to zoom
-          </p>
-        </div>
-        <Canvas camera={{ position: [20, 15, -15], fov: 45 }}>
-          <ambientLight intensity={0.7} />
-          <pointLight position={[0, 8, 0]} intensity={0.5} />
-          <pointLight position={[-6, 6, -6]} intensity={0.3} color="#ffd700" />
-          <pointLight position={[6, 6, 6]} intensity={0.3} color="#ffd700" />
-          <Environment preset="apartment" />
-          <FourSeaterRoom />
-          <OrbitControls 
-            enableZoom={true}
-            maxPolarAngle={Math.PI / 2}
-            minDistance={8}
-            maxDistance={40}
-          />
-        </Canvas>
-      </div>
-    );
-  }
-
-  return (
-    <div className="min-h-screen bg-gray-50 pt-[12vh] px-6 md:px-16 pb-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-lg shadow-md p-6 text-center">
-          <h1 className="text-2xl font-bold text-[#2B4B7E] mb-4">
-            3D View Not Available
-          </h1>
-          <p className="text-gray-600 mb-4">
-            The 3D view for {hostel === 'gh1' ? 'Girls Hostel Block 1' : 
-                           hostel === 'gh2' ? 'Girls Hostel Block 2' : 
-                           hostel === 'gh3' ? 'Girls Hostel Block 3' : 
-                           hostel === 'bh1' ? 'Boys Hostel Block 1' : 
-                           'Boys Hostel Block 2'}, {roomType} Seater is not available yet.
-          </p>
-          <button
-            onClick={() => navigate('/room-view-3d-selection')}
-            className="bg-[#2B4B7E] text-white px-6 py-2 rounded-lg hover:bg-[#1a3a6d] transition-colors"
-          >
-            Go Back to Selection
-          </button>
-        </div>
-      </div>
+        />
+      </Canvas>
+      </Suspense>
     </div>
   );
 };
