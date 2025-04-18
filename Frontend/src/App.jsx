@@ -14,7 +14,7 @@ import RoomView3D from "./components/RoomView3D";
 import RoomView3DSelection from "./components/RoomView3DSelection";
 import RoomPage from "./components/RoomPage";
 import RoomViewPage from "./components/RoomViewPage";
-import Chatbot from "./components/Chatbot";
+import ChatBot from "./components/ChatBot";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -78,7 +78,7 @@ function App() {
             <Route path="/room-view/:bedtype" element={<RoomViewPage />} />
           </Routes>
         </div>
-        <Chatbot />
+        <ChatBot />
       </div>
      </Router> 
     
