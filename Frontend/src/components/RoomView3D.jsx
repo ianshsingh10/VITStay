@@ -1,35 +1,54 @@
-import React, { useEffect, Suspense } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import * as THREE from 'three';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Box, Environment, Cylinder, Plane } from '@react-three/drei';
+import React, { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import * as THREE from "three";
+import { Canvas } from "@react-three/fiber";
+import {
+  OrbitControls,
+  Box,
+  Environment,
+  Cylinder,
+  Plane,
+} from "@react-three/drei";
 
 const Room = () => {
   // Calculate positions for wardrobes and study tables
   const wardrobePositions = [
-    { z: -9, x: 4 },    // First wardrobe
-    { z: -1, x: 4 },    // Second wardrobe
-    { z: 7, x: 4 }      // Third wardrobe
+    { z: -9, x: 4 }, // First wardrobe
+    { z: -1, x: 4 }, // Second wardrobe
+    { z: 7, x: 4 }, // Third wardrobe
   ];
 
   const studyTablePositions = [
-    { z: -5, x: 4 },    // First study table (between first and second wardrobe)
-    { z: 3, x: 4 },     // Second study table (between second and third wardrobe)
-    { z: 11, x: 4 }     // Third study table (after third wardrobe)
+    { z: -5, x: 4 }, // First study table (between first and second wardrobe)
+    { z: 3, x: 4 }, // Second study table (between second and third wardrobe)
+    { z: 11, x: 4 }, // Third study table (after third wardrobe)
   ];
 
   return (
     <>
       {/* Room walls */}
       <Box args={[12, 9, 24]} position={[0, 4.5, 0]}>
-        <meshStandardMaterial color="#ffffff" transparent opacity={0.2} side={2} />
+        <meshStandardMaterial
+          color="#ffffff"
+          transparent
+          opacity={0.2}
+          side={2}
+        />
       </Box>
 
       {/* Floor with beige side tiles */}
-      <Plane args={[12, 24]} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
+      <Plane
+        args={[12, 24]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        position={[0, 0, 0]}
+      >
         <meshStandardMaterial color="#F5F5DC" />
       </Plane>
-      <Plane args={[3, 20]} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.01, 0]}>
+      <Plane
+        args={[3, 20]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        position={[0, 0.01, 0]}
+      >
         <meshStandardMaterial color="#DEB887" />
       </Plane>
 
@@ -159,13 +178,13 @@ const Room = () => {
       {[-4, 4].map((zPosition) => (
         <group key={`fan-${zPosition}`}>
           <Cylinder args={[0.1, 0.1, 0.5, 8]} position={[-4, 8.7, zPosition]}>
-        <meshStandardMaterial color="#c0c0c0" />
-      </Cylinder>
+            <meshStandardMaterial color="#c0c0c0" />
+          </Cylinder>
           <Box args={[4, 0.1, 0.5]} position={[-4, 8.5, zPosition]}>
-        <meshStandardMaterial color="#c0c0c0" />
-      </Box>
+            <meshStandardMaterial color="#c0c0c0" />
+          </Box>
           <Box args={[0.5, 0.1, 4]} position={[-4, 8.5, zPosition]}>
-        <meshStandardMaterial color="#c0c0c0" />
+            <meshStandardMaterial color="#c0c0c0" />
           </Box>
         </group>
       ))}
@@ -182,7 +201,11 @@ const Room = () => {
             <meshStandardMaterial color="#87CEEB" transparent opacity={0.3} />
           </Box>
           {/* Curtain Rod */}
-          <Cylinder args={[0.05, 0.05, 4, 8]} rotation={[0, 0, Math.PI/2]} position={[5.75, 7, zPosition]}>
+          <Cylinder
+            args={[0.05, 0.05, 4, 8]}
+            rotation={[0, 0, Math.PI / 2]}
+            position={[5.75, 7, zPosition]}
+          >
             <meshStandardMaterial color="#8b4513" />
           </Cylinder>
           {/* Curtains */}
@@ -204,14 +227,27 @@ const SingleRoom = () => {
     <>
       {/* Room walls */}
       <Box args={[12, 9, 12]} position={[0, 4.5, 0]}>
-        <meshStandardMaterial color="#ffffff" transparent opacity={0.2} side={2} />
+        <meshStandardMaterial
+          color="#ffffff"
+          transparent
+          opacity={0.2}
+          side={2}
+        />
       </Box>
 
       {/* Floor with beige side tiles */}
-      <Plane args={[12, 12]} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
+      <Plane
+        args={[12, 12]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        position={[0, 0, 0]}
+      >
         <meshStandardMaterial color="#F5F5DC" />
       </Plane>
-      <Plane args={[3, 10]} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.01, 0]}>
+      <Plane
+        args={[3, 10]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        position={[0, 0.01, 0]}
+      >
         <meshStandardMaterial color="#DEB887" />
       </Plane>
 
@@ -325,28 +361,32 @@ const SingleRoom = () => {
       {/* Single Ceiling Fan */}
       <group>
         <Cylinder args={[0.1, 0.1, 0.5, 8]} position={[-4, 8.7, 0]}>
-        <meshStandardMaterial color="#c0c0c0" />
-      </Cylinder>
+          <meshStandardMaterial color="#c0c0c0" />
+        </Cylinder>
         <Box args={[4, 0.1, 0.5]} position={[-4, 8.5, 0]}>
-        <meshStandardMaterial color="#c0c0c0" />
-      </Box>
+          <meshStandardMaterial color="#c0c0c0" />
+        </Box>
         <Box args={[0.5, 0.1, 4]} position={[-4, 8.5, 0]}>
-        <meshStandardMaterial color="#c0c0c0" />
-      </Box>
+          <meshStandardMaterial color="#c0c0c0" />
+        </Box>
       </group>
 
       {/* Window and Curtain */}
       <group>
         {/* Window Frame */}
         <Box args={[0.3, 5, 3]} position={[5.85, 4.5, 0]}>
-        <meshStandardMaterial color="#ffffff" />
+          <meshStandardMaterial color="#ffffff" />
         </Box>
         {/* Window Glass */}
         <Box args={[0.1, 4.8, 2.8]} position={[5.85, 4.5, 0]}>
           <meshStandardMaterial color="#87CEEB" transparent opacity={0.3} />
         </Box>
         {/* Curtain Rod */}
-        <Cylinder args={[0.05, 0.05, 4, 8]} rotation={[0, 0, Math.PI/2]} position={[5.75, 7, 0]}>
+        <Cylinder
+          args={[0.05, 0.05, 4, 8]}
+          rotation={[0, 0, Math.PI / 2]}
+          position={[5.75, 7, 0]}
+        >
           <meshStandardMaterial color="#8b4513" />
         </Cylinder>
         {/* Curtains */}
@@ -362,7 +402,11 @@ const SingleRoom = () => {
       <group>
         {/* Mirror Glass */}
         <Box args={[0.05, 5, 2]} position={[0, 4, -5.9]}>
-          <meshStandardMaterial color="#c0c0c0" metalness={0.9} roughness={0.1} />
+          <meshStandardMaterial
+            color="#c0c0c0"
+            metalness={0.9}
+            roughness={0.1}
+          />
         </Box>
         {/* Mirror Frame */}
         <Box args={[0.1, 5.2, 2.2]} position={[0, 4, -5.95]}>
@@ -378,14 +422,27 @@ const TwoSeaterRoom = () => {
     <>
       {/* Room walls */}
       <Box args={[12, 9, 16]} position={[0, 4.5, 0]}>
-        <meshStandardMaterial color="#ffffff" transparent opacity={0.2} side={2} />
+        <meshStandardMaterial
+          color="#ffffff"
+          transparent
+          opacity={0.2}
+          side={2}
+        />
       </Box>
 
       {/* Floor with beige side tiles */}
-      <Plane args={[12, 16]} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
+      <Plane
+        args={[12, 16]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        position={[0, 0, 0]}
+      >
         <meshStandardMaterial color="#F5F5DC" />
       </Plane>
-      <Plane args={[3, 14]} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.01, 0]}>
+      <Plane
+        args={[3, 14]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        position={[0, 0.01, 0]}
+      >
         <meshStandardMaterial color="#DEB887" />
       </Plane>
 
@@ -617,31 +674,6 @@ const TwoSeaterRoom = () => {
           </Box>
         </group>
       ))}
-
-      {/* Windows */}
-      {[-4, 4].map((zPosition) => (
-        <group key={`window-${zPosition}`}>
-          {/* Window Frame */}
-          <Box args={[0.3, 5, 3]} position={[0, 4.5, zPosition + 7]}>
-            <meshStandardMaterial color="#ffffff" />
-          </Box>
-          {/* Window Glass */}
-          <Box args={[0.1, 4.8, 2.8]} position={[0, 4.5, zPosition + 7]}>
-            <meshStandardMaterial color="#87CEEB" transparent opacity={0.3} />
-          </Box>
-      {/* Curtain Rod */}
-          <Cylinder args={[0.05, 0.05, 4, 8]} rotation={[0, 0, Math.PI/2]} position={[0, 7, zPosition + 7]}>
-        <meshStandardMaterial color="#8b4513" />
-      </Cylinder>
-          {/* Curtains */}
-          <Box args={[0.1, 5, 1.5]} position={[0, 4.5, zPosition + 6]}>
-            <meshStandardMaterial color="#FFE4E1" transparent opacity={0.8} />
-          </Box>
-          <Box args={[0.1, 5, 1.5]} position={[0, 4.5, zPosition + 8]}>
-            <meshStandardMaterial color="#FFE4E1" transparent opacity={0.8} />
-          </Box>
-        </group>
-      ))}
     </>
   );
 };
@@ -651,14 +683,27 @@ const FourSeaterRoom = () => {
     <>
       {/* Room walls - Pink color */}
       <Box args={[16, 9, 20]} position={[0, 4.5, 0]}>
-        <meshStandardMaterial color="#FFB6C1" transparent opacity={0.2} side={2} />
+        <meshStandardMaterial
+          color="#FFB6C1"
+          transparent
+          opacity={0.2}
+          side={2}
+        />
       </Box>
 
       {/* Floor with beige side tiles */}
-      <Plane args={[16, 20]} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
+      <Plane
+        args={[16, 20]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        position={[0, 0, 0]}
+      >
         <meshStandardMaterial color="#F5F5DC" />
       </Plane>
-      <Plane args={[4, 18]} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.01, 0]}>
+      <Plane
+        args={[4, 18]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        position={[0, 0.01, 0]}
+      >
         <meshStandardMaterial color="#DEB887" />
       </Plane>
 
@@ -709,14 +754,23 @@ const FourSeaterRoom = () => {
             <meshStandardMaterial color="#8b4513" />
           </Box>
           {/* Door Handles */}
-          <Box args={[0.1, 0.3, 0.1]} position={[xPos + 1.2, 4, index * 6 - 3.6]}>
+          <Box
+            args={[0.1, 0.3, 0.1]}
+            position={[xPos + 1.2, 4, index * 6 - 3.6]}
+          >
             <meshStandardMaterial color="#c0c0c0" />
           </Box>
-          <Box args={[0.1, 0.3, 0.1]} position={[xPos + 1.2, 4, index * 6 - 2.4]}>
+          <Box
+            args={[0.1, 0.3, 0.1]}
+            position={[xPos + 1.2, 4, index * 6 - 2.4]}
+          >
             <meshStandardMaterial color="#c0c0c0" />
           </Box>
           {/* Lock */}
-          <Box args={[0.15, 0.15, 0.15]} position={[xPos + 1.2, 4.5, index * 6 - 3]}>
+          <Box
+            args={[0.15, 0.15, 0.15]}
+            position={[xPos + 1.2, 4.5, index * 6 - 3]}
+          >
             <meshStandardMaterial color="#000000" />
           </Box>
         </group>
@@ -733,14 +787,23 @@ const FourSeaterRoom = () => {
             <meshStandardMaterial color="#8b4513" />
           </Box>
           {/* Door Handles */}
-          <Box args={[0.1, 0.3, 0.1]} position={[xPos - 1.2, 4, index * 6 - 3.6]}>
+          <Box
+            args={[0.1, 0.3, 0.1]}
+            position={[xPos - 1.2, 4, index * 6 - 3.6]}
+          >
             <meshStandardMaterial color="#c0c0c0" />
           </Box>
-          <Box args={[0.1, 0.3, 0.1]} position={[xPos - 1.2, 4, index * 6 - 2.4]}>
+          <Box
+            args={[0.1, 0.3, 0.1]}
+            position={[xPos - 1.2, 4, index * 6 - 2.4]}
+          >
             <meshStandardMaterial color="#c0c0c0" />
           </Box>
           {/* Lock */}
-          <Box args={[0.15, 0.15, 0.15]} position={[xPos - 1.2, 4.5, index * 6 - 3]}>
+          <Box
+            args={[0.15, 0.15, 0.15]}
+            position={[xPos - 1.2, 4.5, index * 6 - 3]}
+          >
             <meshStandardMaterial color="#000000" />
           </Box>
         </group>
@@ -814,7 +877,11 @@ const FourSeaterRoom = () => {
           </Box>
           {/* Tube Light Glow */}
           <Box args={[3.8, 0.1, 0.4]} position={[xPos, 8.65, -6]}>
-            <meshStandardMaterial color="#ffffff" emissive="#ffffff" emissiveIntensity={0.5} />
+            <meshStandardMaterial
+              color="#ffffff"
+              emissive="#ffffff"
+              emissiveIntensity={0.5}
+            />
           </Box>
         </group>
       ))}
@@ -841,10 +908,45 @@ const RoomView3D = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { hostel, roomType } = location.state || {};
+  const renderOverlay = () => {
+    const getHostelName = () => {
+      switch (hostel) {
+        case "gh1":
+          return "Girls Hostel Block 1";
+        case "gh2":
+          return "Girls Hostel Block 2";
+        default:
+          return "Hostel";
+      }
+    };
+
+    const roomNameMap = {
+      "1-bedflat": "Single Bedded Room",
+      "2-bedflat": "Two Bedded Room",
+      "3-bedflat": "Three Bedded Room",
+      "4-bedflat": "Four Bedded Room",
+    };
+
+    return (
+      <div className="absolute  top-[15vh] right-4 z-10 bg-white/80 p-4 rounded-lg shadow-md">
+        <h2 className="text-xl font-bold mb-2">
+          {getHostelName()} - {roomNameMap[roomType]}
+        </h2>
+        <p className="text-sm text-gray-600">
+          Use mouse to interact:
+          <br />
+          • Left click + drag to rotate
+          <br />
+          • Right click + drag to pan
+          <br />• Scroll to zoom
+        </p>
+      </div>
+    );
+  };
 
   useEffect(() => {
     if (!hostel || !roomType) {
-      navigate('/room-view-3d-selection');
+      navigate("/room-view-3d-selection");
     }
   }, [hostel, roomType, navigate]);
 
@@ -852,72 +954,119 @@ const RoomView3D = () => {
     return null;
   }
 
-  const getRoomComponent = () => {
-    if (hostel === 'gh1' || hostel === 'gh2') {
-      switch (roomType) {
-        case '1': return <SingleRoom />;
-        case '2': return <TwoSeaterRoom />;
-        case '3': return <Room />;
-        case '4': return <FourSeaterRoom />;
-        default: return null;
-      }
-    }
-    return null;
-  };
-
-  return (
-    <div className="w-full h-screen bg-gray-100">
-      <div className="absolute top-4 left-4 z-10 bg-white/80 p-4 rounded-lg shadow-md">
-        <h2 className="text-xl font-bold mb-2">
-          {hostel === 'gh1' ? 'Girls Hostel Block 1' : 'Girls Hostel Block 2'} - {roomType} Seater Room
-        </h2>
-        <p className="text-sm text-gray-600">
-          Use mouse to interact:<br />
-          • Left click + drag to rotate<br />
-          • Right click + drag to pan<br />
-          • Scroll to zoom
-        </p>
-        <button
-          onClick={() => navigate('/room-view-3d-selection')}
-          className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
-        >
-          Back to Selection
-        </button>
-      </div>
-      
-      <Suspense fallback={<LoadingScreen />}>
-        <Canvas
-          shadows
-          gl={{ antialias: true }}
-          camera={{
-            position: [15, 15, 15],
-            fov: 50,
-            near: 0.1,
-            far: 1000
-          }}
-          style={{ background: '#f0f0f0' }}
-        >
-          <ambientLight intensity={0.5} />
-          <directionalLight
-            position={[10, 10, 5]}
-            intensity={1}
-            castShadow
-            shadow-mapSize-width={1024}
-            shadow-mapSize-height={1024}
+  if ((hostel === "gh1" || hostel === "gh2") && roomType === "3-bedflat") {
+    return (
+      <div className="w-full pt-[12vh] h-[calc(100vh-12vh)] bg-gray-100">
+        {renderOverlay()}
+        <Canvas camera={{ position: [20, 15, 20], fov: 45 }}>
+          <ambientLight intensity={0.7} />
+          <pointLight position={[0, 8, 0]} intensity={0.5} />
+          <pointLight position={[-6, 6, -8]} intensity={0.3} color="#ffd700" />
+          <pointLight position={[-6, 6, 0]} intensity={0.3} color="#ffd700" />
+          <pointLight position={[-6, 6, 8]} intensity={0.3} color="#ffd700" />
+          <Environment preset="apartment" />
+          <Room />
+          <OrbitControls
+            enableZoom={true}
+            maxPolarAngle={Math.PI / 2}
+            minDistance={8}
+            maxDistance={40}
           />
-        <pointLight position={[0, 8, 0]} intensity={0.5} />
-        <Environment preset="apartment" />
-          {getRoomComponent()}
-        <OrbitControls 
-          enableZoom={true}
-          maxPolarAngle={Math.PI / 2}
+        </Canvas>
+      </div>
+    );
+  }
+
+  if ((hostel === "gh1" || hostel === "gh2") && roomType === "2-bedflat") {
+    return (
+      <div className="w-full pt-[12vh] h-[calc(100vh-12vh)] bg-gray-100">
+        {renderOverlay()}
+        <Canvas camera={{ position: [18, 12, 18], fov: 45 }}>
+          <ambientLight intensity={0.7} />
+          <pointLight position={[0, 8, 0]} intensity={0.5} />
+          <pointLight position={[-6, 6, -6]} intensity={0.3} color="#ffd700" />
+          <pointLight position={[6, 6, 6]} intensity={0.3} color="#ffd700" />
+          <Environment preset="apartment" />
+          <TwoSeaterRoom />
+          <OrbitControls
+            enableZoom={true}
+            maxPolarAngle={Math.PI / 2}
+            minDistance={6}
+            maxDistance={35}
+          />
+        </Canvas>
+      </div>
+    );
+  }
+
+  if ((hostel === "gh1" || hostel === "gh2") && roomType === "1-bedflat") {
+    return (
+      <div className="w-full pt-[12vh] h-[calc(100vh-12vh)] bg-gray-100">
+        {renderOverlay()}
+        <Canvas camera={{ position: [15, 10, 15], fov: 45 }}>
+          <ambientLight intensity={0.7} />
+          <pointLight position={[0, 8, 0]} intensity={0.5} />
+          <pointLight position={[-6, 6, -4]} intensity={0.3} color="#ffd700" />
+          <pointLight position={[-6, 6, 4]} intensity={0.3} color="#ffd700" />
+          <Environment preset="apartment" />
+          <SingleRoom />
+          <OrbitControls
+            enableZoom={true}
+            maxPolarAngle={Math.PI / 2}
             minDistance={5}
             maxDistance={30}
-        />
-      </Canvas>
-      </Suspense>
+          />
+        </Canvas>
+      </div>
+    );
+  }
+
+  if ((hostel === "gh1" || hostel === "gh2") && roomType === "4-bedflat") {
+    return (
+      <div className="w-full pt-[12vh] h-[calc(100vh-12vh)] bg-gray-100">
+        {renderOverlay()}
+        <Canvas camera={{ position: [20, 15, -15], fov: 45 }}>
+          <ambientLight intensity={0.7} />
+          <pointLight position={[0, 8, 0]} intensity={0.5} />
+          <pointLight position={[-6, 6, -6]} intensity={0.3} color="#ffd700" />
+          <pointLight position={[6, 6, 6]} intensity={0.3} color="#ffd700" />
+          <Environment preset="apartment" />
+          <FourSeaterRoom />
+          <OrbitControls
+            enableZoom={true}
+            maxPolarAngle={Math.PI / 2}
+            minDistance={8}
+            maxDistance={40}
+          />
+        </Canvas>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen pt-[12vh] bg-gray-50 pt-[12vh] px-6 md:px-16 pb-8">
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-white rounded-lg shadow-md p-6 text-center">
+          <h1 className="text-2xl font-bold text-[#2B4B7E] mb-4">
+            3D View Not Available
+          </h1>
+          <p className="text-gray-600 mb-4">
+            The 3D view for{" "}
+            {hostel === "gh1"
+              ? "Girls Hostel Block 1"
+              : hostel === "gh2"
+              ? "Girls Hostel Block 2"
+              : hostel === "gh3"
+              ? "Girls Hostel Block 3"
+              : hostel === "bh1"
+              ? "Boys Hostel Block 1"
+              : "Boys Hostel Block 2"}
+            , {roomType} Seater is not available yet.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default RoomView3D; 
+export default RoomView3D;

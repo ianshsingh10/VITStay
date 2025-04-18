@@ -1,40 +1,55 @@
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, PerspectiveCamera, Environment, useGLTF } from '@react-three/drei';
-import { useNavigate } from 'react-router-dom';
+import React, { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import {
+  OrbitControls,
+  PerspectiveCamera,
+  Environment,
+  useGLTF,
+} from "@react-three/drei";
 
 function RoomModel({ bedType }) {
   const modelMap = {
-    '2-bedflat': '/assets/2bedflat.glb',
-    '3-bedflat': '/assets/3bedflat.glb',
-    '4-bedflat': '/assets/3bedflat.glb',
+    "2-bedflat": "/assets/2bedflat.glb",
+    "3-bedflat": "/assets/3bedflat.glb",
+    "4-bedflat": "/assets/3bedflat.glb",
   };
 
-  const modelPath = modelMap[bedType] || modelMap['3-bed'];
+  const modelPath = modelMap[bedType] || modelMap["3-bed"];
   const { scene } = useGLTF(modelPath);
 
   return <primitive object={scene} scale={1} />;
 }
 
-export default function RoomScene({ bedType }) {
-  
-  const navigate = useNavigate();
-
+export default function RoomScene({ bedType, hostel }) {
   return (
-    <div className="relative w-full h-screen bg-red-300">
-      {/* Back Button */}
-      <button
-        className="absolute top-[12vmin] left-4 z-10 bg-white text-blue-600 font-medium px-4 py-2 rounded shadow hover:bg-blue-100"
-        onClick={() => navigate(-1)}
-      >
-        ← Back
-      </button>
+    <div className="relative w-full pt-[12vh] h-screen bg-red-300 pt-12vh">
+      <div className="absolute top-4 right-4 z-10 bg-white/80 p-4 rounded-lg shadow-md">
+        <h2 className="text-xl font-bold mb-2">
+          {hostel === "gh1"
+            ? "Girls Hostel Block 1"
+            : hostel === "gh2"
+            ? "Girls Hostel Block 2"
+            : hostel === "gh3"
+            ? "Girls Hostel Block 3"
+            : hostel === "bh1"
+            ? "Boys Hostel Block 1"
+            : "Boys Hostel Block 2"}{" "}
+          - {bedType}
+        </h2>
+        <p className="text-sm text-gray-600">
+          Use mouse to interact:
+          <br />
+          • Left click + drag to rotate
+          <br />
+          • Right click + drag to pan
+          <br />• Scroll to zoom
+        </p>
+      </div>
 
       {/* 3D Scene */}
-      <Canvas shadows style={{ width: '100%', height: '100%' }}>
+      <Canvas shadows style={{ width: "100%", height: "100%" }}>
         <Suspense fallback={null}>
           <ambientLight intensity={0} />
-          <directionalLight position={[5, 10, 5]} intensity={2} castShadow />
           <PerspectiveCamera makeDefault position={[5, 5, 10]} fov={50} />
           <OrbitControls />
           <Environment preset="apartment" />

@@ -10,9 +10,7 @@ import ComplaintForm from "./components/ComplaintForm";
 import HostelFeeStructure from "./components/HostelFeeStructure";
 import Instructions from "./components/Instructions";
 import WardenDetails from "./components/WardenDetails";
-import RoomView3D from "./components/RoomView3D";
 import RoomView3DSelection from "./components/RoomView3DSelection";
-import RoomPage from "./components/RoomPage";
 import RoomViewPage from "./components/RoomViewPage";
 import ChatBot from "./components/ChatBot";
 
@@ -49,39 +47,21 @@ function App() {
         <div className="pt-[12vh]"> {/* Added padding to account for fixed navbar */}
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route
-              path="/login"
-              element={
-                <Login setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} />
-              }
-            />
-            <Route
-              path="/profile"
-              element={<Profile handleLogout={handleLogout} />}
-            />
+            <Route path="/login" element={ <Login setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} /> } />
+            <Route path="/profile" element={<Profile handleLogout={handleLogout} />} />
             <Route path="/hostels" element={<HostelSelectionPage />} />
-            <Route
-              path="/select-room/:hostelName"
-              element={<RoomSelectionPage />}
-            />
-            <Route
-              path="/select-room/:hostelName"
-              element={<RoomSelectionPage />}
-            />
-            {/* New Route for Complaint Page */}
+            <Route path="/complaint" element={<ComplaintForm />} />
+            <Route path="/select-room/:hostelName" element={<RoomSelectionPage />} />
             <Route path="/hostel-fee" element={<HostelFeeStructure />} />
             <Route path="/instructions" element={<Instructions />} />
             <Route path="/warden-details" element={<WardenDetails />} />
             <Route path="/room-view-3d-selection" element={<RoomView3DSelection />} />
-            <Route path="/room-view-3d" element={<RoomView3D />} />
-            <Route path="/room-view" element={<RoomPage />} />
-            <Route path="/room-view/:bedtype" element={<RoomViewPage />} />
+            <Route path="/room-view-3d/:hostel/:bedtype" element={<RoomViewPage />} />
           </Routes>
         </div>
         <ChatBot />
       </div>
-     </Router> 
-    
+    </Router>
   );
 }
 

@@ -35,10 +35,13 @@ const RoomSelectionPage = () => {
 
   const handleRoomSelect = (roomNumber) => {
     setSelectedRoom(roomNumber);
+    setSelectedBed(null); // reset bed selection when changing room
   };
 
   const handleFloorChange = (floor) => {
     setCurrentFloor(floor);
+    setSelectedRoom(null); // reset room & bed on floor change
+    setSelectedBed(null);
   };
 
   const handleConfirmSelection = async () => {
@@ -58,9 +61,11 @@ const RoomSelectionPage = () => {
           },
           body: JSON.stringify({
             roomNumber: selectedRoom,
-            bedIndex: selectedBed
+            bedIndex: selectedBed,
+            hostelName: hostelName // ✅ Send selected hostelName to backend
           })
         });
+
         const result = await response.json();
         if (response.ok) {
           alert(`Room ${selectedRoom}, Bed ${selectedBed + 1} successfully booked!`);
@@ -78,7 +83,7 @@ const RoomSelectionPage = () => {
   };
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen font-[Poppins]">
       <div className="w-1/4 bg-gray-800 text-white p-6 space-y-4 overflow-y-auto pt-[15vh]">
         <div className="flex justify-between mb-4 overflow-x-auto scrollbar-hide">
           {[...Array(7)].map((_, floor) => (
@@ -87,7 +92,7 @@ const RoomSelectionPage = () => {
               onClick={() => handleFloorChange(floor)}
               className={`py-2 px-4 mx-1 rounded-xl transition ${currentFloor === floor ? 'bg-blue-500' : 'bg-gray-700'}`}
             >
-              Floor {floor}
+              Floor {floor === 0 ? "Ground" : floor}
             </button>
           ))}
         </div>

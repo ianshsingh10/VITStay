@@ -31,30 +31,6 @@ function Navbar({ isLoggedIn, setIsLoggedIn, setUsername, username }) {
                         </div>
                     </Link>
                 </div>
-
-                {/* Center Section - Navigation Links */}
-                <div className="hidden md:flex gap-6 text-[1.5vmin] text-bold text-white">
-                    <NavLink to="/instructions" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
-                        INSTRUCTIONS
-                    </NavLink>
-                    <NavLink to="/hostel-fee" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
-                        FEE STRUCTURE
-                    </NavLink>
-                    <NavLink to="/affidavits" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
-                        AFFIDAVITS
-                    </NavLink>
-                    <NavLink to="/warden-details" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
-                        WARDEN DETAILS
-                    </NavLink>
-                    <NavLink to="/hostels" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
-                        HOSTEL PREFERENCES
-                    </NavLink>
-                    <NavLink to="/room-view-3d-selection" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
-                        ROOM VIEW 3D
-                    </NavLink>
-                    <NavLink to="/final-allotment" className={({ isActive }) => isActive ? "text-[#A7E2FF]" : "hover:text-[#A7E2FF]"}>
-                        FINAL ROOM ALLOTMENT
-                    </NavLink>
                 {/* Center - Desktop Nav */}
                 <div className="hidden md:flex gap-6 text-[1.5vmin] font-bold text-white">
                     {[
@@ -63,7 +39,7 @@ function Navbar({ isLoggedIn, setIsLoggedIn, setUsername, username }) {
                         { to: "/affidavits", label: "AFFIDAVITS" },
                         { to: "/warden-details", label: "WARDEN DETAILS" },
                         { to: "/hostels", label: "HOSTEL PREFERENCES" },
-                        { to: "/room-view", label: "ROOM VIEW 3D" },
+                        { to: "/room-view-3d-selection", label: "ROOM VIEW 3D" },
                         { to: "/complaint", label: "COMPLAINT" },
                     ].map((link) => (
                         <NavLink
@@ -101,7 +77,6 @@ function Navbar({ isLoggedIn, setIsLoggedIn, setUsername, username }) {
                         {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
                 </div>
-            </div>
             </div>
             {/* Mobile Nav Dropdown */}
             {isMenuOpen && (
